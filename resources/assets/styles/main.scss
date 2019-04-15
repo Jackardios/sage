@@ -11,15 +11,15 @@
  */
 // @import "~some-node-module";
 
-/** Import theme styles */
-@import "common/global";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
+/** Import common styles */
+@import "common/placeholders";
+@import "common/mixins";
+@import "common/grid";
+@import "common/font-faces";
+@import "common/font-sizes";
+@import "common/animations";
+@import "common/common";
+@import "common/spacing";
+
+/** Import components styles */
+@import "components/**/*";
