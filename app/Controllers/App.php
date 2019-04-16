@@ -30,4 +30,51 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function logo()
+    {
+        return get_field('logo', 'options');
+    }
+
+    public function socials()
+    {
+        return get_field('socials', 'options');
+    }
+
+    public function emails()
+    {
+        return get_field('emails', 'options');
+    }
+
+    public function phones()
+    {
+        return get_field('phones', 'options');
+    }
+
+    public function phone()
+    {
+        $phones = $this->phones();
+        return (!empty($phones) ? $phones[0]['phone'] : null);
+    }
+
+    public function email()
+    {
+        $emails = $this->emails();
+        return (!empty($emails) ? $emails[0]['email'] : null);
+    }
+
+    public function openingHours()
+    {
+        return get_field('opening_hours', 'options');
+    }
+
+    public function address()
+    {
+        return get_field('address', 'options');
+    }
+
+    public function addressMap()
+    {
+        return get_field('address_map', 'options');
+    }
 }
