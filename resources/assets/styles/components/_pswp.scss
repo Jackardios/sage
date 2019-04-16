@@ -1,0 +1,22 @@
+.pswp {
+  &__bg {
+    background: rgba(#000, 0.75);
+  }
+
+  &__button {
+    &--close {
+      background-color: $color-primary;
+
+      &:hover {
+        background-color: $color-primary--light;
+      }
+    }
+
+    &--arrow--left,
+    &--arrow--right {
+      &::before {
+        background-color: $color-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+$primary-header-height: 70px;
+$primary-header-height-lg: 90px;
+
+.primary-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-width: 320px;
+  z-index: 1000;
+  transform: translateZ(0);
+  will-change: transform;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(#988c74, 0.2);
+  transition: box-shadow 0.24s ease;
+
+  &--shadowed {
+    box-shadow: $primary-shadow;
+  }
+
+  &__container {
+    height: $primary-header-height;
+
+    @include bp-from(lg) {
+      height: $primary-header-height-lg;
+    }
+  }
+
+  &-logo {
+    @extend %inline-block-middle;
+
+    color: $color-dark;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &__image {
+      display: block;
+      width: 60px;
+      height: auto;
+
+      @include bp-from(lg) {
+        width: 90px;
+      }
+    }
+  }
+
+  &__nav {
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 15px;
+    border-left: 1px solid $color-gray--light;
+    border-right: 1px solid $color-gray--light;
+
+    ul {
+      position: relative;
+      display: block;
+      list-style: none;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      margin-right: -20px;
+
+      @include bp-from(xxl) {
+        margin-right: -30px;
+      }
+
+      li {
+        @extend %inline-block-middle;
+
+        margin-right: 20px;
+
+        @include bp-from(xxl) {
+          margin-right: 30px;
+        }
+
+        a {
+          text-decoration: none;
+          color: lighten($color-dark, 30%);
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  &__burger-btn {
+    @extend %inline-block-middle;
+
+    margin-right: 10px;
+
+    @include bp-from(lg) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.primary-header-padding-offset {
+  padding-top: $primary-header-height;
+
+  @include bp-from(lg) {
+    padding-top: $primary-header-height-lg;
+  }
+}
+
+.primary-header-margin-offset {
+  margin-top: $primary-header-height;
+
+  @include bp-from(lg) {
+    margin-top: $primary-header-height-lg;
+  }
+}
+
+/* wp specific styles */
+#wpadminbar {
+  position: fixed !important;
+  transform: translateZ(0);
+}
+
+.admin-bar .primary-header {
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .primary-header {
+    margin-top: 46px;
+  }
+}
