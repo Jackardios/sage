@@ -121,6 +121,8 @@ add_filter('excerpt_length', function ($length) {
 /**
  * Load external functions
  */
+require_once get_template_directory() . '/functions/create_acf_fields.php';
+require_once get_template_directory() . '/functions/send_mail.php';
 // require_once get_template_directory() . '/functions/create_post_type_products.php';
 // require_once get_template_directory() . '/functions/create_post_type_documents.php';
 // require_once get_template_directory() . '/functions/create_post_type_dealers.php';
@@ -129,6 +131,5 @@ add_filter('excerpt_length', function ($length) {
 // require_once get_template_directory() . '/functions/remove_archive_title_prefixes.php';
 // require_once get_template_directory() . '/functions/create_post_type_projects.php';
 // require_once get_template_directory() . '/functions/ajax_review.php';
-require_once get_template_directory() . '/functions/send_mail.php';
 
 // flush_rewrite_rules(false);
