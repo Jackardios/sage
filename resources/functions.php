@@ -38,7 +38,7 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
  * Ensure dependencies are loaded
  */
 if (!class_exists('Roots\\Sage\\Container')) {
-    if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
+    if (!file_exists($composer = __DIR__ . '/../vendor/autoload.php')) {
         $sage_error(
             __('You must run <code>composer install</code> from the Sage directory.', 'sage'),
             __('Autoloader not found.', 'sage')
@@ -85,8 +85,50 @@ array_map(
 Container::getInstance()
     ->bindIf('config', function () {
         return new Config([
-            'assets' => require dirname(__DIR__).'/config/assets.php',
-            'theme' => require dirname(__DIR__).'/config/theme.php',
-            'view' => require dirname(__DIR__).'/config/view.php',
+            'assets' => require dirname(__DIR__) . '/config/assets.php',
+            'theme' => require dirname(__DIR__) . '/config/theme.php',
+            'view' => require dirname(__DIR__) . '/config/view.php',
         ]);
     }, true);
+
+/**
+ * Load TGM Plugins
+ */
+require get_template_directory() . '/tgm/default_tgm.php';
+
+/**
+ * ACF Options Page
+ */
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Главные настройки темы',
+        'menu_title' => 'Настройки темы',
+        'menu_slug' => 'theme-general-settings',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
+}
+
+add_filter('excerpt_more', function ($more) {
+    return '...';
+});
+
+add_filter('excerpt_length', function ($length) {
+    global $post;
+    return 30;
+});
+
+/**
+ * Load external functions
+ */
+// require_once get_template_directory() . '/functions/create_post_type_products.php';
+// require_once get_template_directory() . '/functions/create_post_type_documents.php';
+// require_once get_template_directory() . '/functions/create_post_type_dealers.php';
+// require_once get_template_directory() . '/functions/create_post_type_faq.php';
+// require_once get_template_directory() . '/functions/custom_bcn_template_tag.php';
+// require_once get_template_directory() . '/functions/remove_archive_title_prefixes.php';
+// require_once get_template_directory() . '/functions/create_post_type_projects.php';
+// require_once get_template_directory() . '/functions/ajax_review.php';
+require_once get_template_directory() . '/functions/send_mail.php';
+
+// flush_rewrite_rules(false);
