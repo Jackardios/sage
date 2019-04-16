@@ -1,9 +1,9 @@
 {
-  "name": "roots/sage",
+  "name": "jackardios/sage",
   "type": "wordpress-theme",
   "license": "MIT",
-  "description": "WordPress starter theme with a modern development workflow",
-  "homepage": "https://roots.io/sage/",
+  "description": "WordPress starter theme with a modern development workflow based on roots/sage",
+  "homepage": "https://github.com/Jackardios/sage/",
   "authors": [
     {
       "name": "Ben Word",
@@ -19,11 +19,18 @@
       "name": "QWp6t",
       "email": "hi@qwp6t.me",
       "homepage": "https://github.com/qwp6t"
+    },
+    {
+      "name": "Jackardios",
+      "email": "salahutdinov.salavat@gmail.com",
+      "homepage": "https://github.com/jackardios"
     }
   ],
-  "keywords": ["wordpress"],
+  "keywords": [
+    "wordpress"
+  ],
   "support": {
-    "issues": "https://github.com/roots/sage/issues",
+    "issues": "https://github.com/jackardios/sage/issues",
     "forum": "https://discourse.roots.io/"
   },
   "autoload": {
@@ -43,7 +50,9 @@
     "roots/sage-installer": "~1.6"
   },
   "scripts": {
-    "test": ["phpcs"],
+    "test": [
+      "phpcs"
+    ],
     "post-create-project-cmd": [
       "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
     ]
