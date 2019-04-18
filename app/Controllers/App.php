@@ -36,6 +36,11 @@ class App extends Controller
         return get_field('logo', 'options');
     }
 
+    public function logo_inversed()
+    {
+        return get_field('logo_inversed', 'options');
+    }
+
     public function socials()
     {
         return get_field('socials', 'options');
@@ -51,13 +56,13 @@ class App extends Controller
         return get_field('phones', 'options');
     }
 
-    public function phone()
+    public function oneOfPhone()
     {
         $phones = $this->phones();
         return (!empty($phones) ? $phones[0]['phone'] : null);
     }
 
-    public function email()
+    public function oneOfEmail()
     {
         $emails = $this->emails();
         return (!empty($emails) ? $emails[0]['email'] : null);
