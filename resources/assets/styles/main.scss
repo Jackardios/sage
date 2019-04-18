@@ -10,6 +10,7 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import "~diamodal/src/scss/main.scss";
 
 /** Import common styles */
 @import "common/placeholders";

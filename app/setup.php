@@ -54,6 +54,16 @@ add_action('after_setup_theme', function () {
     add_theme_support('post-thumbnails');
 
     /**
+     * Add new image sizes
+     */
+    if (function_exists('add_image_size')) {
+        add_image_size('small', 150, 150);
+        add_image_size('square_small', 250, 250);
+        add_image_size('square_medium', 500, 500);
+        // add_image_size('square_large', 1024, 1024);
+    }
+
+    /**
      * Enable HTML5 markup support
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */
