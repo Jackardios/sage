@@ -45,7 +45,7 @@ let defaultConfig = require('tailwindcss/defaultConfig')();
 let colors = {
   transparent: 'transparent',
 
-  black: '#333',
+  black: '#333333',
   'gray-darkest': '#3d4852',
   'gray-darker': '#606f7b',
   'gray-dark': '#8795a1',
@@ -61,6 +61,7 @@ let colors = {
   primary: '#e3342f',
   'primary-light': '#ef5753',
   'primary-lighter': '#f9acaa',
+  'primary-lightest': '#f9acaa',
 
   'secondary-darkest': '#462a16',
   'secondary-darker': '#613b1f',
@@ -329,6 +330,7 @@ module.exports = {
     '0': '0',
     '1': '1px',
     '2': '2px',
+    '3': '3px',
     '5': '5px',
   },
 
@@ -350,7 +352,7 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: global.Object.assign({ default: colors['gray-light'] }, colors),
 
   /*
   |-----------------------------------------------------------------------------
@@ -798,7 +800,7 @@ module.exports = {
     backgroundRepeat: [],
     backgroundSize: [],
     borderCollapse: [],
-    borderColors: ['responsive', 'hover', 'focus'],
+    borderColors: ['hover', 'focus'],
     borderRadius: [],
     borderStyle: [],
     borderWidths: [],
@@ -812,10 +814,10 @@ module.exports = {
     leading: [],
     lists: [],
     margin: ['responsive'],
-    maxHeight: ['responsive'],
-    maxWidth: ['responsive'],
-    minHeight: ['responsive'],
-    minWidth: ['responsive'],
+    maxHeight: [],
+    maxWidth: [],
+    minHeight: [],
+    minWidth: [],
     negativeMargin: [],
     objectFit: false,
     objectPosition: false,
@@ -831,7 +833,7 @@ module.exports = {
     svgStroke: false,
     tableLayout: [],
     textAlign: ['responsive'],
-    textColors: ['responsive', 'hover', 'focus'],
+    textColors: ['hover', 'focus'],
     textSizes: ['responsive'],
     textStyle: [],
     tracking: [],

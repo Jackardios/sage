@@ -110,7 +110,7 @@
     &-long {
       padding: 0.875rem 3rem;
 
-      @include bp-from(lg) {
+      @screen lg {
         padding: 0.875rem 4rem;
       }
     }

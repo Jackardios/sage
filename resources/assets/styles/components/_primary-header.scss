@@ -22,7 +22,7 @@ $primary-header-height-lg: 90px;
   &__container {
     height: $primary-header-height;
 
-    @include bp-from(lg) {
+    @screen lg {
       height: $primary-header-height-lg;
     }
   }
@@ -39,7 +39,7 @@ $primary-header-height-lg: 90px;
       width: 60px;
       height: auto;
 
-      @include bp-from(lg) {
+      @screen lg {
         width: 90px;
       }
     }
@@ -61,7 +61,7 @@ $primary-header-height-lg: 90px;
       padding: 0;
       margin-right: -20px;
 
-      @include bp-from(xxl) {
+      @screen xl {
         margin-right: -30px;
       }
 
@@ -70,7 +70,7 @@ $primary-header-height-lg: 90px;
 
         margin-right: 20px;
 
-        @include bp-from(xxl) {
+        @screen xl {
           margin-right: 30px;
         }
 
@@ -91,7 +91,7 @@ $primary-header-height-lg: 90px;
 
     margin-right: 10px;
 
-    @include bp-from(lg) {
+    @screen lg {
       margin-right: 20px;
     }
   }
@@ -100,7 +100,7 @@ $primary-header-height-lg: 90px;
 .primary-header-padding-offset {
   padding-top: $primary-header-height;
 
-  @include bp-from(lg) {
+  @screen lg {
     padding-top: $primary-header-height-lg;
   }
 }
@@ -108,7 +108,7 @@ $primary-header-height-lg: 90px;
 .primary-header-margin-offset {
   margin-top: $primary-header-height;
 
-  @include bp-from(lg) {
+  @screen lg {
     margin-top: $primary-header-height-lg;
   }
 }

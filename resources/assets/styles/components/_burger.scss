@@ -96,7 +96,7 @@ $burger-line-height: 3px;
   }
 
   &__wrapper {
-    @include bp-from(lg) {
+    @screen lg {
       padding-top: 50px;
     }
   }

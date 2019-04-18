@@ -1,5 +1,6 @@
 /* eslint-disable */
-const tailwindcssConfig = require('../../../tailwind');
+const path = require('path');
+const config = require('./config');
 const cssnanoConfig = {
   preset: ['default', { discardComments: { removeAll: true } }],
 };
@@ -12,7 +13,7 @@ module.exports = ({ file, options }) => {
       autoprefixer: options.enabled.optimize,
       'css-mqpacker': options.enabled.optimize ? { sort: true } : false,
       'postcss-flexbugs-fixes': options.enabled.optimize,
-      tailwindcss: tailwindcssConfig,
+      tailwindcss: path.join(config.paths.assets, 'build/tailwind.js'),
     },
   };
 };
