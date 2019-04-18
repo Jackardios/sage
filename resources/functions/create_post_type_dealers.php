@@ -37,9 +37,9 @@ function create_post_type_dealers()
         'menu_position' => 6,
         'menu_icon' => 'dashicons-location',
         'supports' => array('title'),
-        'show_in_rest' => true,
-        'rest_base' => 'dealers',
-        'rest_controller_class' => 'WP_REST_Posts_Controller',
+        // 'show_in_rest' => true,
+        // 'rest_base' => 'dealers',
+        // 'rest_controller_class' => 'WP_REST_Posts_Controller',
     );
 
     register_post_type('dealers', $args);
@@ -141,18 +141,18 @@ function advanced_custom_search($where, $wp_query)
 
     if (empty($where))
         return $where;
- 
+
     // get search expression
     $terms = $wp_query->query_vars['s'];
-    
+
     // explode search expression to get search terms
     $exploded = explode(' ', $terms);
     if ($exploded === false || count($exploded) == 0)
         $exploded = array(0 => $terms);
-         
+
     // reset search in order to rebuilt it as we whish
     $where = '';
-    
+
     // get searcheable_acf, a list of advanced custom fields you want to search content in
     $list_searcheable_acf = list_searcheable_acf();
     foreach ($exploded as $tag) :
@@ -164,14 +164,14 @@ function advanced_custom_search($where, $wp_query)
               SELECT * FROM wp_postmeta
 	              WHERE post_id = wp_posts.ID
 	                AND (";
-    foreach ($list_searcheable_acf as $searcheable_acf) :
-        if ($searcheable_acf == $list_searcheable_acf[0]) :
-        $where .= " (meta_key LIKE '%" . $searcheable_acf . "%' AND meta_value LIKE '%$tag%') ";
-    else :
-        $where .= " OR (meta_key LIKE '%" . $searcheable_acf . "%' AND meta_value LIKE '%$tag%') ";
-    endif;
-    endforeach;
-    $where .= ")
+        foreach ($list_searcheable_acf as $searcheable_acf) :
+            if ($searcheable_acf == $list_searcheable_acf[0]) :
+                $where .= " (meta_key LIKE '%" . $searcheable_acf . "%' AND meta_value LIKE '%$tag%') ";
+            else :
+                $where .= " OR (meta_key LIKE '%" . $searcheable_acf . "%' AND meta_value LIKE '%$tag%') ";
+            endif;
+        endforeach;
+        $where .= ")
             )
             OR EXISTS (
               SELECT * FROM wp_comments

@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Send user review (ajax action)
+ * Add user review(comment) (ajax action)
  */
-add_action('wp_ajax_send_review', __NAMESPACE__ . '\\sendReview');
-add_action('wp_ajax_nopriv_send_review', __NAMESPACE__ . '\\sendReview');
-function sendReview()
+add_action('wp_ajax_add_review', __NAMESPACE__ . '\\addReview');
+add_action('wp_ajax_nopriv_add_review', __NAMESPACE__ . '\\addReview');
+function addReview()
 {
   try {
     // Валидация
