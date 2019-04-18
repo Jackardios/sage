@@ -16,7 +16,7 @@
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transfor: translateY(0);
   }
 }
 
@@ -54,44 +54,5 @@
 
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes translateToBottom {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  90% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scaleX(0.9);
-    opacity: 0;
-  }
-
-  30% {
-    opacity: 1;
-  }
-
-  90% {
-    transform: scaleX(0.99);
-  }
-
-  100% {
-    transform: scaleX(1);
-    opacity: 0;
   }
 }
