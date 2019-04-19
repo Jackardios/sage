@@ -5,17 +5,17 @@
 
   &__button {
     &--close {
-      background-color: $color-primary;
+      background-color: $colors-primary;
 
       &:hover {
-        background-color: $color-primary--light;
+        background-color: $colors-primary-light;
       }
     }
 
     &--arrow--left,
     &--arrow--right {
       &::before {
-        background-color: $color-dark;
+        background-color: $colors-gray-darkest;
       }
     }
   }

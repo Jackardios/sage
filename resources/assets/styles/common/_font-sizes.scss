@@ -1,72 +1,67 @@
-// font-size
-$font-size-large--mobile: 2.5rem;
-$font-size-large--tablet: 3rem;
-$font-size-large: 3.5rem;
-
 %font-size-large {
-  font-size: $font-size-large--mobile;
+  @apply text-4xl;
 
-  @screen sm {
-    font-size: $font-size-large--tablet;
+  @screen md {
+    @apply text-5xl;
   }
 
   @screen lg {
-    font-size: $font-size-large;
+    @apply text-6xl;
+  }
+
+  @screen xl {
+    @apply text-7xl;
   }
 }
-
-$font-size-1--mobile: 2.5rem;
-$font-size-1--tablet: 2.75rem;
-$font-size-1: 2.875rem;
 
 %font-size-1 {
-  font-size: $font-size-1--mobile;
+  @apply text-3xl;
 
   @screen md {
-    font-size: $font-size-1--tablet;
+    @apply text-4xl;
   }
 
-  @media screen and (min-width: 1600px) {
-    font-size: $font-size-1;
+  @screen lg {
+    @apply text-5xl;
   }
 }
-
-$font-size-2--mobile: 2rem;
-$font-size-2--tablet: 2.25rem;
-$font-size-2: 2.5rem;
 
 %font-size-2 {
-  font-size: $font-size-2--mobile;
+  @apply text-2xl;
 
   @screen md {
-    font-size: $font-size-2--tablet;
+    @apply text-3xl;
   }
 
-  @media screen and (min-width: 1600px) {
-    font-size: $font-size-2;
+  @screen lg {
+    @apply text-4xl;
   }
 }
-
-$font-size-3: 1.5rem;
 
 %font-size-3 {
-  font-size: $font-size-3;
-}
+  @apply text-xl;
 
-$font-size-4: 1.125rem;
+  @screen md {
+    @apply text-2xl;
+  }
+
+  @screen lg {
+    @apply text-3xl;
+  }
+}
 
 %font-size-4 {
-  font-size: $font-size-4;
-}
+  @apply text-base;
 
-$font-size-5: $base-font-size * 0.875;
+  @screen lg {
+    @apply text-lg;
+  }
+}
 
 %font-size-5 {
-  font-size: $font-size-5;
+  @apply text-sm;
 }
 
-$font-size-6: $base-font-size * 0.75;
-
 %font-size-6 {
-  font-size: $font-size-6;
+  @apply text-xs;
 }

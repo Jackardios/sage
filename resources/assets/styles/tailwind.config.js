@@ -46,30 +46,30 @@ let colors = {
   transparent: 'transparent',
 
   black: '#333333',
-  'gray-darkest': '#3d4852',
-  'gray-darker': '#606f7b',
-  'gray-dark': '#8795a1',
-  gray: '#b8c2cc',
-  'gray-light': '#dae1e7',
-  'gray-lighter': '#f1f5f8',
-  'gray-lightest': '#f8fafc',
+  'gray-darkest': '#5d6774',
+  'gray-darker': '#758090',
+  'gray-dark': '#919aa6',
+  gray: '#ADB4BD',
+  'gray-light': '#c9ced4',
+  'gray-lighter': '#e5e8ea',
+  'gray-lightest': '#f8f9fa',
   white: '#ffffff',
 
-  'primary-darkest': '#3b0d0c',
-  'primary-darker': '#621b18',
-  'primary-dark': '#cc1f1a',
+  'primary-darkest': '#1e334a',
+  'primary-darker': '#00254b',
+  'primary-dark': '#003e7e',
   primary: '#e3342f',
-  'primary-light': '#ef5753',
-  'primary-lighter': '#f9acaa',
-  'primary-lightest': '#f9acaa',
+  'primary-light': '#0070e4',
+  'primary-lighter': '#1889ff',
+  'primary-lightest': '#4ba3ff',
 
-  'secondary-darkest': '#462a16',
-  'secondary-darker': '#613b1f',
-  'secondary-dark': '#de751f',
-  secondary: '#f6993f',
-  'secondary-light': '#faad63',
-  'secondary-lighter': '#fcd9b6',
-  'secondary-lightest': '#fff5eb',
+  'secondary-darkest': '#0a472a',
+  'secondary-darker': '#117344',
+  'secondary-dark': '#17a05e',
+  secondary: '#1ecc78',
+  'secondary-light': '#3be291',
+  'secondary-lighter': '#67e9aa',
+  'secondary-lightest': '#94efc3',
 };
 
 module.exports = {
@@ -192,6 +192,8 @@ module.exports = {
     '3xl': '1.875rem', // 30px
     '4xl': '2.25rem', // 36px
     '5xl': '3rem', // 48px
+    '6xl': '3.5rem', // 56px
+    '7xl': '4rem', // 64px
   },
 
   /*

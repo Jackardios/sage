@@ -30,7 +30,7 @@ $primary-header-height-lg: 90px;
   &-logo {
     @extend %inline-block-middle;
 
-    color: $color-dark;
+    color: $colors-gray-darkest;
     text-transform: uppercase;
     text-decoration: none;
 
@@ -49,8 +49,8 @@ $primary-header-height-lg: 90px;
     overflow: hidden;
     text-align: center;
     padding: 20px 15px;
-    border-left: 1px solid $color-gray--light;
-    border-right: 1px solid $color-gray--light;
+    border-left: 1px solid $colors-gray-lighter;
+    border-right: 1px solid $colors-gray-lighter;
 
     ul {
       position: relative;
@@ -76,10 +76,10 @@ $primary-header-height-lg: 90px;
 
         a {
           text-decoration: none;
-          color: lighten($color-dark, 30%);
+          color: lighten($colors-gray-darkest, 30%);
 
           &:hover {
-            color: $color-primary;
+            color: $colors-primary;
           }
         }
       }
