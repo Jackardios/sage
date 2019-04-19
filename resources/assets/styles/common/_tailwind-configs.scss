@@ -1,15 +1,15 @@
 /* Converted Tailwind Config to scss */
 
 $colors-transparent: transparent;
-$colors-black: #333333;
+$colors-black: #333;
 $colors-gray-darkest: #5d6774;
 $colors-gray-darker: #758090;
 $colors-gray-dark: #919aa6;
-$colors-gray: #ADB4BD;
+$colors-gray: #adb4bd;
 $colors-gray-light: #c9ced4;
 $colors-gray-lighter: #e5e8ea;
 $colors-gray-lightest: #f8f9fa;
-$colors-white: #ffffff;
+$colors-white: #fff;
 $colors-primary-darkest: #1e334a;
 $colors-primary-darker: #00254b;
 $colors-primary-dark: #003e7e;
@@ -25,19 +25,40 @@ $colors-secondary-light: #3be291;
 $colors-secondary-lighter: #67e9aa;
 $colors-secondary-lightest: #94efc3;
 
-
 $screens-sm: 576px;
 $screens-md: 768px;
 $screens-lg: 992px;
 $screens-xl: 1200px;
 
+$fonts-sans: (
+  system-ui,
+  BlinkMacSystemFont,
+  -apple-system,
+  Segoe UI,
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  Fira Sans,
+  Droid Sans,
+  Helvetica Neue,
+  sans-serif
+);
+$fonts-serif: (
+  Constantia,
+  Lucida Bright,
+  Lucidabright,
+  Lucida Serif,
+  Lucida,
+  DejaVu Serif,
+  Bitstream Vera Serif,
+  Liberation Serif,
+  Georgia,
+  serif
+);
 
-$fonts-sans: (system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif);
-$fonts-serif: (Constantia,Lucida Bright,Lucidabright,Lucida Serif,Lucida,DejaVu Serif,Bitstream Vera Serif,Liberation Serif,Georgia,serif);
-
-
-$textSizes-xs: .75rem;
-$textSizes-sm: .875rem;
+$textSizes-xs: 0.75rem;
+$textSizes-sm: 0.875rem;
 $textSizes-base: 1rem;
 $textSizes-lg: 1.125rem;
 $textSizes-xl: 1.25rem;
@@ -47,7 +68,6 @@ $textSizes-4xl: 2.25rem;
 $textSizes-5xl: 3rem;
 $textSizes-6xl: 3.5rem;
 $textSizes-7xl: 4rem;
-
 
 $fontWeights-100: 100;
 $fontWeights-200: 200;
@@ -59,28 +79,25 @@ $fontWeights-700: 700;
 $fontWeights-800: 800;
 $fontWeights-900: 900;
 
-
 $leading-none: 1;
 $leading-tight: 1.25;
 $leading-normal: 1.5;
 $leading-loose: 2;
 
-
 $tracking-tight: -0.05em;
 $tracking-normal: 0;
 $tracking-wide: 0.05em;
 
-
 $textColors-transparent: transparent;
-$textColors-black: #333333;
+$textColors-black: #333;
 $textColors-gray-darkest: #5d6774;
 $textColors-gray-darker: #758090;
 $textColors-gray-dark: #919aa6;
-$textColors-gray: #ADB4BD;
+$textColors-gray: #adb4bd;
 $textColors-gray-light: #c9ced4;
 $textColors-gray-lighter: #e5e8ea;
 $textColors-gray-lightest: #f8f9fa;
-$textColors-white: #ffffff;
+$textColors-white: #fff;
 $textColors-primary-darkest: #1e334a;
 $textColors-primary-darker: #00254b;
 $textColors-primary-dark: #003e7e;
@@ -96,17 +113,16 @@ $textColors-secondary-light: #3be291;
 $textColors-secondary-lighter: #67e9aa;
 $textColors-secondary-lightest: #94efc3;
 
-
 $backgroundColors-transparent: transparent;
-$backgroundColors-black: #333333;
+$backgroundColors-black: #333;
 $backgroundColors-gray-darkest: #5d6774;
 $backgroundColors-gray-darker: #758090;
 $backgroundColors-gray-dark: #919aa6;
-$backgroundColors-gray: #ADB4BD;
+$backgroundColors-gray: #adb4bd;
 $backgroundColors-gray-light: #c9ced4;
 $backgroundColors-gray-lighter: #e5e8ea;
 $backgroundColors-gray-lightest: #f8f9fa;
-$backgroundColors-white: #ffffff;
+$backgroundColors-white: #fff;
 $backgroundColors-primary-darkest: #1e334a;
 $backgroundColors-primary-darker: #00254b;
 $backgroundColors-primary-dark: #003e7e;
@@ -122,11 +138,9 @@ $backgroundColors-secondary-light: #3be291;
 $backgroundColors-secondary-lighter: #67e9aa;
 $backgroundColors-secondary-lightest: #94efc3;
 
-
 $backgroundSize-auto: auto;
 $backgroundSize-cover: cover;
 $backgroundSize-contain: contain;
-
 
 $borderWidths-0: 0;
 $borderWidths-1: 1px;
@@ -134,18 +148,17 @@ $borderWidths-2: 2px;
 $borderWidths-3: 3px;
 $borderWidths-5: 5px;
 
-
 $borderColors-default: #c9ced4;
 $borderColors-transparent: transparent;
-$borderColors-black: #333333;
+$borderColors-black: #333;
 $borderColors-gray-darkest: #5d6774;
 $borderColors-gray-darker: #758090;
 $borderColors-gray-dark: #919aa6;
-$borderColors-gray: #ADB4BD;
+$borderColors-gray: #adb4bd;
 $borderColors-gray-light: #c9ced4;
 $borderColors-gray-lighter: #e5e8ea;
 $borderColors-gray-lightest: #f8f9fa;
-$borderColors-white: #ffffff;
+$borderColors-white: #fff;
 $borderColors-primary-darkest: #1e334a;
 $borderColors-primary-darker: #00254b;
 $borderColors-primary-dark: #003e7e;
@@ -161,13 +174,11 @@ $borderColors-secondary-light: #3be291;
 $borderColors-secondary-lighter: #67e9aa;
 $borderColors-secondary-lightest: #94efc3;
 
-
 $borderRadius-none: 0;
-$borderRadius-sm: .125rem;
-$borderRadius-default: .25rem;
-$borderRadius-lg: .5rem;
+$borderRadius-sm: 0.125rem;
+$borderRadius-default: 0.25rem;
+$borderRadius-lg: 0.5rem;
 $borderRadius-full: 9999px;
-
 
 $width-1: 0.25rem;
 $width-2: 0.5rem;
@@ -199,7 +210,6 @@ $width-5\/6: 83.33333%;
 $width-full: 100%;
 $width-screen: 100vw;
 
-
 $height-1: 0.25rem;
 $height-2: 0.5rem;
 $height-3: 0.75rem;
@@ -219,15 +229,12 @@ $height-px: 1px;
 $height-full: 100%;
 $height-screen: 100vh;
 
-
 $minWidth-0: 0;
 $minWidth-full: 100%;
-
 
 $minHeight-0: 0;
 $minHeight-full: 100%;
 $minHeight-screen: 100vh;
-
 
 $maxWidth-xs: 20rem;
 $maxWidth-sm: 30rem;
@@ -240,10 +247,8 @@ $maxWidth-4xl: 90rem;
 $maxWidth-5xl: 100rem;
 $maxWidth-full: 100%;
 
-
 $maxHeight-full: 100%;
 $maxHeight-screen: 100vh;
-
 
 $padding-0: 0;
 $padding-1: 0.25rem;
@@ -260,7 +265,6 @@ $padding-20: 5rem;
 $padding-24: 6rem;
 $padding-32: 8rem;
 $padding-px: 1px;
-
 
 $margin-0: 0;
 $margin-1: 0.25rem;
@@ -279,7 +283,6 @@ $margin-32: 8rem;
 $margin-auto: auto;
 $margin-px: 1px;
 
-
 $negativeMargin-0: 0;
 $negativeMargin-1: 0.25rem;
 $negativeMargin-2: 0.5rem;
@@ -296,14 +299,15 @@ $negativeMargin-24: 6rem;
 $negativeMargin-32: 8rem;
 $negativeMargin-px: 1px;
 
-
-$shadows-default: (0 2px 4px 0 rgba(0,0,0,0.10));
-$shadows-md: (0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08));
-$shadows-lg: (0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08));
-$shadows-inner: (inset 0 2px 4px 0 rgba(0,0,0,0.06));
-$shadows-outline: (0 0 0 3px rgba(52,144,220,0.5));
+$shadows-default: (0 2px 4px 0 rgba(0, 0, 0, 0.1));
+$shadows-md: (0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08));
+$shadows-lg: (
+  0 15px 30px 0 rgba(0, 0, 0, 0.11),
+  0 5px 15px 0 rgba(0, 0, 0, 0.08)
+);
+$shadows-inner: (inset 0 2px 4px 0 rgba(0, 0, 0, 0.06));
+$shadows-outline: (0 0 0 3px rgba(52, 144, 220, 0.5));
 $shadows-none: none;
-
 
 $zIndex-0: 0;
 $zIndex-10: 10;
@@ -313,15 +317,12 @@ $zIndex-40: 40;
 $zIndex-50: 50;
 $zIndex-auto: auto;
 
-
 $opacity-0: 0;
-$opacity-25: .25;
-$opacity-50: .5;
-$opacity-75: .75;
+$opacity-25: 0.25;
+$opacity-50: 0.5;
+$opacity-75: 0.75;
 $opacity-100: 1;
 
-
 $svgFill-current: currentColor;
-
 
 $svgStroke-current: currentColor;
