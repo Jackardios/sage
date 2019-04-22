@@ -59,6 +59,7 @@ module.exports = {
         /^diacart/,
         /active/,
         /focus/,
+        /pswp/,
       ]),
     }),
   ],
