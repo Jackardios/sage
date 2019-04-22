@@ -1,12 +1,28 @@
 .btn {
   @apply font-700 rounded-full;
 
+  &--uppercase {
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+  }
+
+  &--fullwidth {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  &--small {
+    @apply py-2 px-3 text-sm;
+  }
+
   &--medium {
-    @apply py-2 px-4;
+    @apply py-2 px-4 text-base;
   }
 
   &--large {
-    @apply py-3 px-6;
+    @apply py-3 px-6 text-lg;
   }
 
   &--primary {

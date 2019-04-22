@@ -70,6 +70,22 @@ let colors = {
   'secondary-light': '#3be291',
   'secondary-lighter': '#67e9aa',
   'secondary-lightest': '#94efc3',
+
+  'warning-darkest': '#462a16',
+  'warning-darker': '#613b1f',
+  'warning-dark': '#de751f',
+  warning: '#f6993f',
+  'warning-light': '#faad63',
+  'warning-lighter': '#fcd9b6',
+  'warning-lightest': '#fff5eb',
+
+  'error-darkest': '#3b0d0c',
+  'error-darker': '#621b18',
+  'error-dark': '#cc1f1a',
+  error: '#e3342f',
+  'error-light': '#ef5753',
+  'error-lighter': '#f9acaa',
+  'error-lightest': '#fcebea',
 };
 
 module.exports = {
@@ -333,6 +349,7 @@ module.exports = {
     '1': '1px',
     '2': '2px',
     '3': '3px',
+    '4': '4px',
     '5': '5px',
   },
 

@@ -1,0 +1,19 @@
+.alert {
+  @apply border-l-4 p-4;
+
+  &--info {
+    @apply bg-gray-lightest border-primary text-primary-dark;
+  }
+
+  &--error {
+    @apply bg-error-lightest border-error text-error-dark;
+  }
+
+  &--warning {
+    @apply bg-warning-lightest border-warning text-warning-dark;
+  }
+
+  &__title {
+    @apply font-700;
+  }
+}
