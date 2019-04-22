@@ -20,7 +20,6 @@
 
 %fill-fixed {
   @extend %fill-absolute;
-
   position: fixed;
   min-width: 320px;
 }

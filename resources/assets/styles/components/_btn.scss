@@ -1,92 +1,31 @@
-%btn-common {
-  font-family: $fonts-sans;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 0.02em;
-  // transition: all 0.36s ease;
-}
-
 .btn {
-  @extend %inline-block-middle;
-  @extend %ellipsis;
+  @apply font-700 rounded-full;
 
-  appearance: none;
-  text-decoration: none;
-  background: none;
-  border: none;
-  border-radius: 0;
-  position: relative;
-  user-select: none;
-  line-height: 1.5;
-  z-index: 1;
-
-  &:not(:disabled):not(.disabled) {
-    cursor: pointer;
+  &--medium {
+    @apply py-2 px-4;
   }
 
-  &--multiline {
-    white-space: normal;
-  }
-
-  &--fullwidth {
-    display: block !important;
-    width: 100%;
+  &--large {
+    @apply py-3 px-6;
   }
 
   &--primary {
-    @extend %btn-common;
+    @apply bg-primary text-white;
 
-    color: #fff;
-    background-color: $colors-primary;
-    transition: background-color 0.32s ease;
+    transition: background-color 0.24s ease;
 
     &:hover {
-      background-color: $colors-primary-dark;
+      @apply bg-primary-dark;
     }
   }
 
   &--secondary {
-    @extend %btn-common;
+    @apply bg-secondary text-white;
 
-    color: $colors-gray-darkest;
-    background-color: $colors-secondary;
-    transition: background-color 0.32s ease;
+    transition: background-color 0.24s ease;
 
     &:hover {
-      background-color: $colors-secondary-dark;
+      @apply bg-secondary-dark;
     }
-  }
-
-  &--default {
-    @extend %btn-common;
-
-    color: $colors-gray-darkest;
-    transition: border-color 0.32s ease;
-
-    &:hover {
-      border-color: $colors-gray-darkest;
-    }
-  }
-
-  // size
-  &--no-padding {
-    padding: 0;
-  }
-
-  &--small {
-    @extend %font-size-5;
-
-    padding: 0.875rem 1.5rem;
-  }
-
-  &--medium {
-    font-size: 1rem;
-    padding: 0.875rem 1.5rem;
-  }
-
-  &--large {
-    @extend %font-size-4;
-
-    padding: 1.3125rem 1.875rem;
   }
 }

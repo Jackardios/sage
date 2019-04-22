@@ -5,6 +5,7 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const glob = require('glob-all');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const purgecssWordpress = require('purgecss-with-worpress');
 
 const config = require('./config');
 
@@ -44,6 +45,7 @@ module.exports = {
         'app/**/*.php',
         'resources/views/**/*.php',
         'resources/assets/scripts/**/*.js',
+        'node_modules/slick-carousel/slick/slick.js',
       ]),
       extractors: [
         {
@@ -51,6 +53,8 @@ module.exports = {
           extensions: ['js', 'php'],
         },
       ],
+      whitelist: purgecssWordpress.whitelist,
+      whitelistPatterns: purgecssWordpress.whitelistPatterns,
     }),
   ],
 };
