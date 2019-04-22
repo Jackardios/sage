@@ -5,7 +5,7 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const glob = require('glob-all');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
-const purgecssWordpress = require('purgecss-with-worpress');
+const purgecssWordpress = require('purgecss-with-wordpress');
 
 const config = require('./config');
 
@@ -54,7 +54,12 @@ module.exports = {
         },
       ],
       whitelist: purgecssWordpress.whitelist,
-      whitelistPatterns: purgecssWordpress.whitelistPatterns,
+      whitelistPatterns: purgecssWordpress.whitelistPatterns.concat([
+        /^diamodal/,
+        /^diacart/,
+        /active/,
+        /focus/,
+      ]),
     }),
   ],
 };
