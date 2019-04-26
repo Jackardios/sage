@@ -1,10 +1,10 @@
 import { DiaModalForm } from 'diamodal';
 import { normalizeSerializedArray } from '../util/helpers';
 
-export default (selector = '.callrequest-btn') => {
+export default () => {
   const $globalLoading = $('#global-loading');
-  const callrequestModal = new DiaModalForm({
-    title: 'Заявка на обратный звонок',
+  const fastOrderModal = new DiaModalForm({
+    title: 'Заказ услуги',
     inputs: [
       {
         name: 'user_phone',
@@ -18,12 +18,28 @@ export default (selector = '.callrequest-btn') => {
         required: true,
       },
       {
+        name: 'user_email',
+        type: 'email',
+        placeholder: 'Ваш email',
+        required: false,
+      },
+      {
+        name: 'user_message',
+        type: 'textarea',
+        placeholder: 'Ваше сообщение',
+        required: false,
+      },
+      {
         name: 'user_agreement',
         type: 'checkbox',
         placeholder: `Я соглашаюсь на передачу персональных данных согласно <a href="${
           window.wordpress.baseUrl
         }/privacy-policy/">политике конфиденциальности</a>.`,
         required: true,
+      },
+      {
+        name: 'order',
+        type: 'hidden',
       },
     ],
     submitButtomClass: 'mt-4 btn btn--primary btn--large btn--fullwidth',
@@ -37,7 +53,7 @@ export default (selector = '.callrequest-btn') => {
         type: 'POST',
         dataType: 'JSON',
         data: {
-          action: 'send_callrequest',
+          action: 'send_order',
           ...data,
         },
         beforeSend() {
@@ -55,10 +71,10 @@ export default (selector = '.callrequest-btn') => {
           if (data.status === 'error') {
             window.__diamodalAlertModal.open();
           } else {
-            callrequestModal.close();
+            fastOrderModal.close();
             setTimeout(
               () => window.__diamodalAlertModal.open(),
-              callrequestModal._transitionDuration
+              fastOrderModal._transitionDuration
             );
           }
         },
@@ -71,8 +87,5 @@ export default (selector = '.callrequest-btn') => {
     },
   });
 
-  $(document).on('click', selector, function() {
-    callrequestModal.open();
-    return false;
-  });
+  return fastOrderModal;
 };

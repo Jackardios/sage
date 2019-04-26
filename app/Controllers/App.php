@@ -36,7 +36,7 @@ class App extends Controller
         return get_field('logo', 'options');
     }
 
-    public function logo_inversed()
+    public function logoInversed()
     {
         return get_field('logo_inversed', 'options');
     }

@@ -1,7 +1,8 @@
 import { DiaModal } from 'diamodal';
 
 export default () => {
-  return (window.__diamodalAlertModal = new DiaModal({
+  const window.__diamodalAlertModal = new DiaModal({
     zIndex: 10000,
-  }));
+  });
+  return window.__diamodalAlertModal;
 };
