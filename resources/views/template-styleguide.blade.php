@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    <div class="primary-container container">
+    <div class="container">
       <div class="alert alert--info my-3" role="alert">
         <p class="alert__title">Info</p>
         <p>Something happened that you should know about.</p>
