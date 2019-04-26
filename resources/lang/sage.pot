@@ -1,0 +1,1107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-22 16:10+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: resources/functions.php:17
+msgid "Sage &rsaquo; Error"
+msgstr ""
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr ""
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr ""
+
+#: resources/functions.php:34
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr ""
+
+#: resources/functions.php:34
+msgid "Invalid WordPress version"
+msgstr ""
+
+#: resources/functions.php:43
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+
+#: resources/functions.php:44
+msgid "Autoloader not found."
+msgstr ""
+
+#: resources/functions.php:59
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:10
+#: resources/functions/create_post_type_products.php:12
+msgctxt "Продукция"
+msgid "Продукция"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:11
+msgctxt "Продукт"
+msgid "Продукт"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:13
+msgctxt "Добавить новый продукт"
+msgid "Продукция"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:14
+#: resources/functions/create_post_type_documents.php:14
+#: resources/functions/create_post_type_dealers.php:14
+#: resources/functions/create_post_type_reviews.php:14
+#: resources/functions/create_post_type_projects.php:14
+#: resources/functions/create_post_type_faq.php:14
+msgid "Добавить новый"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:15
+msgid "Добавить новый продукт"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:16
+#: resources/functions/create_post_type_documents.php:16
+#: resources/functions/create_post_type_projects.php:16
+msgid "Новый продукция"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:17
+msgid "Изменить продукт"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:18
+msgid "Посмотреть продукт"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:19
+msgid "Все продукты"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:20
+msgid "Найти продукты"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:21
+msgid "Родительские продукты:"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:22
+msgid "Продукты не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:23
+msgid "Продукты в корзине не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:55
+msgctxt "Категории продуктов"
+msgid "Категории продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:56
+msgctxt "Категория продуктов"
+msgid "Категория продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:57
+msgid "Найти категории продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:58
+msgid "Все категории продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:59
+#: resources/functions/create_post_type_documents.php:56
+#: resources/functions/create_post_type_projects.php:59
+#: resources/functions/create_post_type_faq.php:56
+msgid "Родительская категория"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:60
+#: resources/functions/create_post_type_documents.php:57
+#: resources/functions/create_post_type_projects.php:60
+#: resources/functions/create_post_type_faq.php:57
+msgid "Родительская категория:"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:61
+#: resources/functions/create_post_type_documents.php:58
+#: resources/functions/create_post_type_projects.php:61
+#: resources/functions/create_post_type_faq.php:58
+msgid "Изменить категорию"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:62
+#: resources/functions/create_post_type_documents.php:59
+#: resources/functions/create_post_type_projects.php:62
+#: resources/functions/create_post_type_faq.php:59
+msgid "Обновить категорию"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:63
+#: resources/functions/create_post_type_documents.php:60
+#: resources/functions/create_post_type_projects.php:63
+#: resources/functions/create_post_type_faq.php:60
+msgid "Добавить новую категорию"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:64
+#: resources/functions/create_post_type_documents.php:61
+#: resources/functions/create_post_type_projects.php:64
+#: resources/functions/create_post_type_faq.php:61
+msgid "Название новой категории"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:65
+#: resources/functions/create_post_type_documents.php:62
+#: resources/functions/create_post_type_projects.php:65
+#: resources/functions/create_post_type_faq.php:62
+msgid "Категории"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:91
+msgctxt "Размеры продуктов"
+msgid "Размеры продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:92
+msgctxt "Размер продуктов"
+msgid "Размер продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:93
+msgid "Найти размеры продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:94
+msgid "Все размеры продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:95
+msgid "Родительский размер"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:96
+msgid "Родительский размер:"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:97
+msgid "Изменить размер"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:98
+msgid "Обновить размер"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:99
+msgid "Добавить новый размер"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:100
+msgid "Название нового размера"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:101
+msgid "Размеры"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:127
+msgctxt "Составы продуктов"
+msgid "Составы продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:128
+msgctxt "Состав продуктов"
+msgid "Состав продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:129
+msgid "Найти составы продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:130
+msgid "Все составы продуктов"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:131
+msgid "Родительский состав"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:132
+msgid "Родительский состав:"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:133
+msgid "Изменить состав"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:134
+msgid "Обновить состав"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:135
+msgid "Добавить новый состав"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:136
+msgid "Название нового состава"
+msgstr ""
+
+#: resources/functions/create_post_type_products.php:137
+msgid "Составы"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:10
+#: resources/functions/create_post_type_documents.php:12
+msgctxt "Документы"
+msgid "Документы"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:11
+msgctxt "Документ"
+msgid "Документ"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:13
+msgctxt "Добавить новый документ"
+msgid "Документы"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:15
+msgid "Добавить новый документ"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:17
+msgid "Изменить документ"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:18
+msgid "Посмотреть документ"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:19
+msgid "Все документы"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:20
+msgid "Найти документы"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:21
+msgid "Родительские документы:"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:22
+msgid "Документы не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:23
+msgid "Документы в корзине не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:52
+msgctxt "Категории документов"
+msgid "Категории документов"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:53
+msgctxt "Категория документов"
+msgid "Категория документов"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:54
+msgid "Найти категории документов"
+msgstr ""
+
+#: resources/functions/create_post_type_documents.php:55
+msgid "Все категории документов"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:10
+#: resources/functions/create_post_type_dealers.php:11
+#: resources/functions/create_post_type_dealers.php:12
+msgctxt "Дилеры"
+msgid "Дилеры"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:13
+msgctxt "Добавить новый дилер"
+msgid "Дилеры"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:15
+msgid "Добавить новый дилер"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:16
+msgid "Новый дилер"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:17
+msgid "Изменить дилер"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:18
+msgid "Посмотреть дилеры"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:19
+msgid "Все дилеры"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:20
+msgid "Найти дилеры"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:21
+msgid "Родительские дилеры:"
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:22
+msgid "Дилеры не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_dealers.php:23
+msgid "Дилеры в корзине не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:10
+#: resources/functions/create_post_type_services.php:12
+msgctxt "Услуги"
+msgid "Услуги"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:11
+msgctxt "Услуга"
+msgid "Услуга"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:13
+msgctxt "Добавить новую услугу"
+msgid "Услуги"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:14
+msgid "Добавить новую"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:15
+msgid "Добавить новую услугу"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:16
+msgid "Новая услуга"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:17
+msgid "Изменить услугу"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:18
+msgid "Посмотреть услугу"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:19
+msgid "Все услуги"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:20
+msgid "Найти услуги"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:21
+msgid "Родительские услуги:"
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:22
+msgid "Услуги не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_services.php:23
+msgid "Услуги в корзине не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:10
+#: resources/functions/create_post_type_reviews.php:12
+msgctxt "Отзывы"
+msgid "Отзывы"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:11
+msgctxt "Отзыв"
+msgid "Отзыв"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:13
+msgctxt "Добавить новый отзыв"
+msgid "Отзывы"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:15
+msgid "Добавить новый отзыв"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:16
+msgid "Новый отзыв"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:17
+msgid "Изменить отзыв"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:18
+msgid "Посмотреть отзыв"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:19
+msgid "Все отзывы"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:20
+msgid "Найти отзывы"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:21
+msgid "Родительские отзывы:"
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:22
+msgid "Отзывы не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_reviews.php:23
+msgid "Отзывы в корзине не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:10
+#: resources/functions/create_post_type_projects.php:12
+msgctxt "Портфолио"
+msgid "Портфолио"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:11
+msgctxt "Проект"
+msgid "Проект"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:13
+msgctxt "Добавить новый проект"
+msgid "Портфолио"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:15
+msgid "Добавить новый проект"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:17
+msgid "Изменить проект"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:18
+msgid "Посмотреть проект"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:19
+msgid "Все проекты"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:20
+msgid "Найти проекты"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:21
+msgid "Родительские проекты:"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:22
+msgid "Проекты не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:23
+msgid "Проекты в корзине не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:55
+msgctxt "Категории проектов"
+msgid "Категории проектов"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:56
+msgctxt "Категория проектов"
+msgid "Категория проектов"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:57
+msgid "Найти категории проектов"
+msgstr ""
+
+#: resources/functions/create_post_type_projects.php:58
+msgid "Все категории проектов"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:10
+#: resources/functions/create_post_type_faq.php:11
+#: resources/functions/create_post_type_faq.php:12
+msgctxt "F.A.Q"
+msgid "F.A.Q"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:13
+msgctxt "Добавить новый вопрос"
+msgid "F.A.Q"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:15
+msgid "Добавить новый вопрос"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:16
+msgid "Новый вопрос"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:17
+msgid "Изменить вопрос"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:18
+msgid "Посмотреть вопросы"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:19
+msgid "Все вопросы"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:20
+msgid "Найти вопросы"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:21
+msgid "Родительские вопросы:"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:22
+msgid "Вопросы не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:23
+msgid "Вопросы в корзине не найдены."
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:52
+msgctxt "Категории faq"
+msgid "Категории faq"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:53
+msgctxt "Категория faq"
+msgid "Категория faq"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:54
+msgid "Найти категории faq"
+msgstr ""
+
+#: resources/functions/create_post_type_faq.php:55
+msgid "Все категории faq"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:393
+#: resources/tgm/class-tgm-plugin-activation.php:920
+#: resources/tgm/class-tgm-plugin-activation.php:2626
+#: resources/tgm/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:394
+#: resources/tgm/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:395
+#: resources/tgm/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:1027
+#: resources/tgm/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:1214
+#: resources/tgm/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3602
+#: resources/tgm/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3602
+#: resources/tgm/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3610
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#: resources/tgm/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: app/filters.php:33
+msgid "Continued"
+msgstr ""
+
+#: app/setup.php:47
+msgid "Primary Navigation"
+msgstr ""
+
+#: app/setup.php:48
+msgid "Secondary Navigation"
+msgstr ""
+
+#: app/setup.php:97
+msgid "Primary"
+msgstr ""
+
+#: app/setup.php:101
+msgid "Footer"
+msgstr ""
+
+#: app/Controllers/App.php:20
+msgid "Latest Posts"
+msgstr ""
+
+#: app/Controllers/App.php:26
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: app/Controllers/App.php:29
+msgid "Not Found"
+msgstr ""
+
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:9
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr ""
+
+#: resources/views/partials/content-single.blade.php:10
+msgid "Pages:"
+msgstr ""
+
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr ""
