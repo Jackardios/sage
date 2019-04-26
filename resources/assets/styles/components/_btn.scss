@@ -1,5 +1,8 @@
 .btn {
-  @apply font-700 rounded-full;
+  @apply inline-block font-700 rounded text-center;
+
+  border: none;
+  line-height: 1.15;
 
   &--uppercase {
     letter-spacing: 0.025em;
@@ -18,27 +21,50 @@
   }
 
   &--medium {
-    @apply py-2 px-4 text-base;
+    @apply py-3 px-6 text-base;
   }
 
   &--large {
-    @apply py-3 px-6 text-lg;
+    @apply py-4 px-8 text-lg;
+  }
+
+  &--default {
+    @apply bg-transparent text-black;
+
+    border: 1px solid rgba(51, 51, 51, 0.75);
+    opacity: 0.75;
+    transition: opacity 0.16s ease;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &--primary {
     @apply bg-primary text-white;
 
-    transition: background-color 0.24s ease;
+    transition: background-color 0.16s ease;
 
     &:hover {
       @apply bg-primary-dark;
     }
   }
 
+  &--primary-dark {
+    @apply bg-primary-dark text-white;
+
+    transition: background-color 0.16s ease;
+
+    &:hover {
+      @apply bg-primary-darkest;
+    }
+  }
+
   &--secondary {
     @apply bg-secondary text-white;
 
-    transition: background-color 0.24s ease;
+    text-shadow: 0 1px 2px rgba(#000, 0.5);
+    transition: background-color 0.16s ease;
 
     &:hover {
       @apply bg-secondary-dark;
