@@ -1,10 +1,10 @@
 import initBurger from '../components/burger';
 import initHeader from '../components/header';
+import initSmoothScrollToAnchor from '../components/smoothScrollToAnchor';
 import initAlertModal from '../components/alertModal';
 import initCallrequestModal from '../components/callrequestModal';
 // import initOrderModal from '../components/orderModal';
 // import initFastOrderModal from '../components/fastOrderModal';
-import initSmoothScrollToAnchor from '../components/smoothScrollToAnchor';
 // import Lightbox from '../components/Lightbox';
 
 export default {
