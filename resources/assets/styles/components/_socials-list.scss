@@ -1,0 +1,22 @@
+.socials-list {
+  @apply -mx-2 -mb-2;
+
+  &__item {
+    @apply inline-block align-middle p-2 text-xl border-none;
+
+    opacity: 0.625;
+    transition: opacity 0.24s ease;
+
+    &--dark {
+      color: $colors-black;
+    }
+
+    &--white {
+      color: #fff;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
