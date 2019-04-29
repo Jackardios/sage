@@ -75,9 +75,9 @@ function my_theme_register_required_plugins()
     array(
       'name' => 'Advanced Custom Fields PRO', // The plugin name.
       'slug' => 'acf', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-5.6.9.zip', // The plugin source.
+      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-5.7.13.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '5.6.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '5.7.13', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
       'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
       'external_url' => '', // If set, overrides default API URL and points to an external URL.
@@ -87,9 +87,9 @@ function my_theme_register_required_plugins()
     array(
       'name' => 'Advanced Custom Fields: Font Awesome Field', // The plugin name.
       'slug' => 'advanced-custom-fields-font-awesome', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-fa-3.0.0-beta2.zip', // The plugin source.
+      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-fa-3.0.2.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '3.0.0-beta2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '3.0.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
       'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
       'external_url' => '', // If set, overrides default API URL and points to an external URL.
@@ -157,11 +157,11 @@ function my_theme_register_required_plugins()
     ),
 
     array(
-      'name' => 'Yoast Seo Premium', // The plugin name.
-      'slug' => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/wordpress-seo-premium-v9.7.zip', // The plugin source.
+      'name' => 'Smush — Сжатие и оптимизация изображений', // The plugin name.
+      'slug' => 'wp-smushit', // The plugin slug (typically the folder name).
+      'source' => get_stylesheet_directory() . '/tgm/plugins/wp-smushit.3.1.1.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '9.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '3.1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
       'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
       'external_url' => '', // If set, overrides default API URL and points to an external URL.
@@ -169,11 +169,23 @@ function my_theme_register_required_plugins()
     ),
 
     array(
-      'name' => 'Smush — Сжатие и оптимизация изображений', // The plugin name.
-      'slug' => 'wp-smushit', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/wp-smushit.3.1.1.zip', // The plugin source.
+      'name' => 'All in One SEO Pack', // The plugin name.
+      'slug' => 'all-in-one-seo', // The plugin slug (typically the folder name).
+      'source' => get_stylesheet_directory() . '/tgm/plugins/all-in-one-seo-pack.2.12.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '3.1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '2.12', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+      'external_url' => '', // If set, overrides default API URL and points to an external URL.
+      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+    ),
+
+    array(
+      'name' => 'TinyMCE Advanced', // The plugin name.
+      'slug' => 'tinymce-advanced', // The plugin slug (typically the folder name).
+      'source' => get_stylesheet_directory() . '/tgm/plugins/tinymce-advanced.5.1.0.zip', // The plugin source.
+      'required' => true, // If false, the plugin is only 'recommended' instead of required.
+      'version' => '5.1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
       'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
       'external_url' => '', // If set, overrides default API URL and points to an external URL.
