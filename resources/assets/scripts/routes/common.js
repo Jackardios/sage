@@ -5,6 +5,7 @@ import initAlertModal from '../components/alertModal';
 import initCallrequestModal from '../components/callrequestModal';
 // import initOrderModal from '../components/orderModal';
 // import initFastOrderModal from '../components/fastOrderModal';
+// import initDiacart from '../components/diacart';
 // import Lightbox from '../components/Lightbox';
 
 export default {
@@ -14,11 +15,7 @@ export default {
     initHeader();
     initSmoothScrollToAnchor();
 
-    const alertModal = initAlertModal();
-    $(alertModal.contentContainer).on('click', '[data-diamodal-close]', e => {
-      alertModal.close();
-    });
-
+    initAlertModal();
     window.__callrequestModal = initCallrequestModal();
     // window.__orderModal = initOrderModal();
     // window.__fastOrderModal = initFastOrderModal();

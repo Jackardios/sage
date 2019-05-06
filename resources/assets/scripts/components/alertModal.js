@@ -1,8 +1,11 @@
 import { DiaModal } from 'diamodal';
 
 export default () => {
-  window.__diamodalAlertModal = new DiaModal({
+  const alertModal = new DiaModal({
     zIndex: 10000,
   });
-  return window.__diamodalAlertModal;
+  $(alertModal.contentContainer).on('click', '[data-diamodal-close]', e => {
+    alertModal.close();
+  });
+  return (window.__diamodalAlertModal = alertModal);
 };
