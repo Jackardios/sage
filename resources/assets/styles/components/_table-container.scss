@@ -1,0 +1,26 @@
+.table-container {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  overflow: auto;
+
+  table {
+    min-width: 100%;
+
+    th {
+      font-weight: bold;
+      text-align: center;
+      // background-color: darken($colors-gray-lightest, 6%);
+    }
+
+    tr:nth-child(odd) {
+      background-color: darken($colors-gray-lightest, 4%);
+    }
+
+    th,
+    td {
+      padding: 0.5rem 1rem;
+      border: 1px solid $colors-gray-light;
+    }
+  }
+}

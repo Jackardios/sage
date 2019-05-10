@@ -1,0 +1,27 @@
+.diacart-counter {
+  &__input,
+  &__btn {
+    @apply bg-transparent text-black;
+
+    border: 1px solid rgba(51, 51, 51, 0.75);
+    opacity: 0.75;
+    transition: opacity 0.16s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__input {
+    border-right: none;
+    border-left: none;
+  }
+
+  &__plus-btn {
+    @apply rounded-l-none;
+  }
+
+  &__minus-btn {
+    @apply rounded-r-none;
+  }
+}

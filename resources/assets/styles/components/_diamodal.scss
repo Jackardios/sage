@@ -1,0 +1,17 @@
+.diamodal-box {
+  // @apply rounded;
+
+  &__header {
+    @apply pl-8;
+  }
+
+  &__content {
+    @apply p-8;
+  }
+}
+
+// .diamodal-form-input {
+//   &__input {
+//     @apply rounded;
+//   }
+// }
