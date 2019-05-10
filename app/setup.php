@@ -58,8 +58,8 @@ add_action('after_setup_theme', function () {
      */
     if (function_exists('add_image_size')) {
         add_image_size('small', 150, 150);
-        add_image_size('square_small', 250, 250);
-        add_image_size('square_medium', 500, 500);
+        add_image_size('square_small', 250, 250, true);
+        add_image_size('square_medium', 500, 500, true);
         // add_image_size('square_large', 1024, 1024);
     }
 
