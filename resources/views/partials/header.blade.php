@@ -28,7 +28,7 @@
     <div class="burger-content-menu">
       @if(!empty($phones))
         @foreach($phones as $p)
-          <a href="tel:{{ $p['phone'] }}" class="burger-content-menu__phone">{{ $p['phone'] }}</a>
+          <a href="tel:{{ App\strip_phone($p['phone']) }}" class="burger-content-menu__phone">{{ $p['phone'] }}</a>
         @endforeach
       @endif
       @if(!empty($emails))

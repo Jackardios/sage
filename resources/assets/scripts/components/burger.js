@@ -8,14 +8,14 @@ export default () => {
   function activate() {
     $burgerBtn.addClass('active');
     $burgerMenu.addClass('active');
-    $body.addClass('hidden-scroll');
+    $body.addClass('overflow-hidden');
     isActive = true;
   }
 
   function deactivate() {
     $burgerBtn.removeClass('active');
     $burgerMenu.removeClass('active');
-    $body.removeClass('hidden-scroll');
+    $body.removeClass('overflow-hidden');
     isActive = false;
   }
 
@@ -29,7 +29,7 @@ export default () => {
     return false;
   });
 
-  $burgerMenu.on('click', 'a[href^="#"]', () => {
+  $burgerMenu.on('click', 'a', () => {
     deactivate();
   });
 };

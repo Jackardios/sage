@@ -136,3 +136,8 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+function strip_phone($phone)
+{
+    return preg_replace('/[^0-9+]/u', '', $phone);
+}

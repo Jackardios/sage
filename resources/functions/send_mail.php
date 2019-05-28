@@ -134,7 +134,7 @@ function renderHTMLTableForItems($items)
 		$item = reset($items);
 		$countOfColumns = count($item);
 		$htmlTable .= '<table class="table"><thead>';
-		$htmlTable .= "<tr><td class='column column--strong' colspan='{$countOfColumns}'>Товары:</td></tr><tr>";
+		$htmlTable .= "<tr><td class='column column--strong' colspan='{$countOfColumns}'>Выбранные услуги:</td></tr><tr>";
 
 		foreach ($item as $key => $value) {
 			$htmlTable .= "<td class='column column--strong'>{$key}:</td>";
@@ -148,55 +148,6 @@ function renderHTMLTableForItems($items)
 	}
 
 	return $htmlTable;
-}
-
-/**
- * Send user 'direct delivery' request to email (ajax action)
- */
-add_action('wp_ajax_send_direct_delivery_request', __NAMESPACE__ . '\\sendDirectDeliveryRequest');
-add_action('wp_ajax_nopriv_send_direct_delivery_request', __NAMESPACE__ . '\\sendDirectDeliveryRequest');
-function sendDirectDeliveryRequest()
-{
-	try {
-		// Валидация
-		if (empty($_POST['user_phone'])) {
-			throw new Exception('Заполните все обязательные поля отмеченные звездочкой*.');
-		}
-
-		if (!empty($_POST['user_email']) && !is_email($_POST['user_email'])) {
-			throw new Exception('Указан некорректный email адрес');
-		}
-
-		// Подготовка email параметров
-		$recipients_emails = normalize_emails_array(get_field('recipients_emails', 'options'));
-		$site_url = get_site_url();
-		$site_name = get_bloginfo('name');
-		$subject = "Новая заявка на 'прямую поставку от производителя' с сайта '{$site_name}' [{$site_url}]";
-		$headers = array('content-type: text/html');
-
-		// Подготовка HTML кода email сообщения
-		$userdataTable = renderHTMLTableForArray(array(
-			"Номер телефона" => $_POST['user_phone'],
-			"Email" => !empty($_POST['user_email']) ? $_POST['user_email'] : 'Не был указан',
-		), "Отправитель: ");
-
-		$body = renderEmailTemplate(array(
-			title => $subject,
-			content => $userdataTable,
-		));
-
-		// Отправка email сообщения
-		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-			echo json_encode(array('status' => 'success', 'message' => "Ваша заявка успешно отправлена"));
-			exit;
-		} else {
-			throw new Exception("Во время отправки запроса произошла внутренняя ошибка, попробуйте еще раз позднее.");
-		}
-	} catch (Exception $e) {
-		echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
-		exit;
-	}
-	wp_die();
 }
 
 /**
@@ -232,7 +183,8 @@ function sendCallrequest()
 
 		// Отправка email сообщения
 		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-			echo json_encode(array('status' => 'success', 'message' => "Ваша заявка успешно отправлена"));
+			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваша заявка на обратный звонок успешно отправлена.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			echo json_encode(array('status' => 'success', 'message' => $response_message));
 			exit;
 		} else {
 			throw new Exception("Во время отправки запроса произошла внутренняя ошибка, попробуйте еще раз позднее.");
@@ -283,7 +235,8 @@ function sendMessage()
 
 		// Отправка email сообщения
 		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-			echo json_encode(array('status' => 'success', 'message' => "Ваша сообщение успешно отправлена"));
+			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваше сообщение успешно отправлено.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			echo json_encode(array('status' => 'success', 'message' => $response_message));
 			exit;
 		} else {
 			throw new Exception("Во время отправки запроса произошла внутренняя ошибка, попробуйте еще раз позднее.");
@@ -298,75 +251,163 @@ function sendMessage()
 /**
  * Send user order request to email (ajax action)
  */
-// add_action('wp_ajax_send_order', __NAMESPACE__ . '\\sendOrder');
-// add_action('wp_ajax_nopriv_send_order', __NAMESPACE__ . '\\sendOrder');
-// function sendOrder()
-// {
-// 	try {
-//         // Валидация
-// 		if (empty($_POST['user_name']) || empty($_POST['user_phone'])) {
-// 			throw new Exception('Заполните все обязательные поля отмеченные звездочкой*.');
-// 		}
+add_action('wp_ajax_send_order', __NAMESPACE__ . '\\sendOrder');
+add_action('wp_ajax_nopriv_send_order', __NAMESPACE__ . '\\sendOrder');
+function sendOrder()
+{
+	try {
+		// Валидация
+		if (empty($_POST['user_name']) || empty($_POST['user_phone'])) {
+			throw new Exception('Заполните все обязательные поля отмеченные звездочкой*.');
+		}
 
-// 		if (!empty($_POST['user_email']) && !is_email($_POST['user_email'])) {
-// 			throw new Exception('Указан некорректный email адрес');
-// 		}
+		if (!empty($_POST['user_email']) && !is_email($_POST['user_email'])) {
+			throw new Exception('Указан некорректный email адрес');
+		}
 
-//   	// Подготовка email параметров
-// 		$recipients_emails = normalize_emails_array(get_field('recipients_emails', 'options'));
-// 		$site_url = get_site_url();
-// 		$site_name = get_bloginfo('name');
-// 		$subject = "Новый заказ с сайта '{$site_name}' [{$site_url}]";
-// 		$headers = array('content-type: text/html');
+		// Подготовка email параметров
+		$recipients_emails = normalize_emails_array(get_field('recipients_emails', 'options'));
+		$site_url = get_site_url();
+		$site_name = get_bloginfo('name');
+		$subject = "Новый заказ с сайта '{$site_name}' [{$site_url}]";
+		$headers = array('content-type: text/html');
 
-// 		// Подготовка HTML кода email сообщения
-// 		$dataTable = renderHTMLTableForArray(array(
-// 			"Имя" => $_POST['user_name'],
-// 			"Номер телефона" => $_POST['user_phone'],
-// 			"Email" => $_POST['user_email'] ?? 'Не указан',
-// 			"Сообщение" => $_POST['user_message'] ?? 'Не указано',
-// 		), "Данные заказа: ");
+		// Подготовка HTML кода email сообщения
+		$dataTable = renderHTMLTableForArray(array(
+			"Имя" => $_POST['user_name'],
+			"Номер телефона" => $_POST['user_phone'],
+			"Email" => $_POST['user_email'] ?? 'Не указан',
+			"Сообщение" => $_POST['user_message'] ?? 'Не указано',
+		), "Данные заказа: ");
 
 
-// 		$items = [];
-// 		if (isset($_POST['order']) && !empty($_POST['order'])) {
-// 			$order = json_decode(str_replace("\\", "", $_POST['order']));
+		$items = [];
+		if (isset($_POST['order']) && !empty($_POST['order'])) {
+			$order = json_decode(str_replace("\\", "", $_POST['order']));
 
-// 			if ($order) {
-// 				foreach ($order as $item) {
-// 					$ids = explode('_', $item->obj->id);
-// 					$post = get_post(intval($ids[0]));
-// 					if ($post) {
-// 						$name = get_the_title($post);
-// 						$link = get_the_permalink($post);
+			if ($order) {
+				foreach ($order as $item) {
+					$post = get_post(intval($item->id));
+					if ($post) {
+						$name = get_the_title($post);
+						$link = get_the_permalink($post);
+						$custom_props = (array)$item->customProps;
+						$custom_props_string = '';
 
-// 						$items[] = [
-// 							'Название' => "<a href='$link'>$name</a>",
-// 							'Сторона' => isset($ids[1]) ? $ids[1] : ' ',
-// 							'Ссылка' => $link,
-// 						];
-// 					}
-// 				}
-// 			}
-// 		}
+						foreach ($custom_props as $key => $value) {
+							$custom_props_string .= "{$key}: <b>{$value}</b>;<br>";
+						}
+						$custom_props_string .= "Количество: <b>{$item->quantity}</b>;";
+						$item_data = [
+							'Услуга' => "<a href='$link'>$name</a>",
+							'Выбранные опции' => $custom_props_string
+						];
+						$items[] = $item_data;
+					}
+				}
+			}
+		}
 
-// 		$itemsTable = renderHTMLTableForItems($items);
+		$itemsTable = renderHTMLTableForItems($items);
 
-// 		$body = renderEmailTemplate(array(
-// 			title => $subject,
-// 			content => $dataTable . $itemsTable,
-// 		));
+		$body = renderEmailTemplate(array(
+			title => $subject,
+			content => $dataTable . $itemsTable,
+		));
 
-//         // Отправка email сообщения
-// 		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-// 			echo json_encode(array('status' => 'success', 'message' => "Ваша заявка успешно отправлена"));
-// 			exit;
-// 		} else {
-// 			throw new Exception("Во время отправки запроса произошла внутренняя ошибка, попробуйте еще раз позднее.");
-// 		}
-// 	} catch (Exception $e) {
-// 		echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
-// 		exit;
-// 	}
-// 	wp_die();
-// }
+		// Отправка email сообщения
+		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
+			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваш заказ успешно отправлен.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			echo json_encode(array('status' => 'success', 'message' => $response_message));
+			exit;
+		} else {
+			throw new Exception("Во время отправки запроса произошла внутренняя ошибка, попробуйте еще раз позднее.");
+		}
+	} catch (Exception $e) {
+		echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
+		exit;
+	}
+	wp_die();
+}
+
+/**
+ * Send calculate request to email (ajax action)
+ */
+add_action('wp_ajax_send_calculate_request', __NAMESPACE__ . '\\sendCalculateRequest');
+add_action('wp_ajax_nopriv_send_calculate_request', __NAMESPACE__ . '\\sendCalculateRequest');
+function sendCalculateRequest()
+{
+	try {
+		// Валидация
+		if (empty($_POST['user_name']) || empty($_POST['user_phone'])) {
+			throw new Exception('Заполните все обязательные поля отмеченные звездочкой*.');
+		}
+
+		if (!empty($_POST['user_email']) && !is_email($_POST['user_email'])) {
+			throw new Exception('Указан некорректный email адрес');
+		}
+
+		// Подготовка email параметров
+		$recipients_emails = normalize_emails_array(get_field('recipients_emails', 'options'));
+		$site_url = get_site_url();
+		$site_name = get_bloginfo('name');
+		$subject = "Новая заявка на расчет цены с сайта '{$site_name}' [{$site_url}]";
+		$headers = array('content-type: text/html');
+
+		// Подготовка HTML кода email сообщения
+		$dataTable = renderHTMLTableForArray(array(
+			"Имя" => $_POST['user_name'],
+			"Номер телефона" => $_POST['user_phone'],
+			"Email" => $_POST['user_email'] ?? 'Не указан',
+			"Сообщение" => $_POST['user_message'] ?? 'Не указано',
+		), "Данные заказа: ");
+
+
+		$items = [];
+		if (isset($_POST['order']) && !empty($_POST['order'])) {
+			$order = json_decode(str_replace("\\", "", $_POST['order']));
+
+			if ($order) {
+				foreach ($order as $item) {
+					$post = get_post(intval($item->id));
+					if ($post) {
+						$name = get_the_title($post);
+						$link = get_the_permalink($post);
+						$custom_props = (array)$item->customProps;
+						$custom_props_string = '';
+
+						foreach ($custom_props as $key => $value) {
+							$custom_props_string .= "{$key}: <b>{$value}</b>;<br>";
+						}
+						$custom_props_string .= "Количество: <b>{$item->quantity}</b>;";
+						$item_data = [
+							'Услуга' => "<a href='$link'>$name</a>",
+							'Выбранные опции' => $custom_props_string
+						];
+						$items[] = $item_data;
+					}
+				}
+			}
+		}
+
+		$itemsTable = renderHTMLTableForItems($items);
+
+		$body = renderEmailTemplate(array(
+			title => $subject,
+			content => $dataTable . $itemsTable,
+		));
+
+		// Отправка email сообщения
+		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
+			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваша заявка успешно отправлена.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			echo json_encode(array('status' => 'success', 'message' => $response_message));
+			exit;
+		} else {
+			throw new Exception("Во время отправки запроса произошла внутренняя ошибка, попробуйте еще раз позднее.");
+		}
+	} catch (Exception $e) {
+		echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
+		exit;
+	}
+	wp_die();
+}

@@ -53,13 +53,30 @@ module.exports = {
           extensions: ['js', 'php'],
         },
       ],
-      whitelist: purgecssWordpress.whitelist,
-      whitelistPatterns: purgecssWordpress.whitelistPatterns.concat([
+      whitelist: purgecssWordpress.whitelist.concat(['fas', 'fab', 'far']),
+      whitelistPatternsChildren: purgecssWordpress.whitelistPatterns.concat([
+        /wp/,
+
+        // libs
+        /pswp/,
+        /slick/,
         /^diamodal/,
         /^diacart/,
+
+        // dynamic styles
+        /^dynamic/,
+        /^overflow/,
         /active/,
         /focus/,
-        /pswp/,
+
+        // font awesome
+        /^fa-facebook/,
+        /^fa-vk/,
+        /^fa-instagram/,
+        /^fa-telegram/,
+        /^fa-whatsapp/,
+        /^fa-twitter/,
+        /^fa-youtube/,
       ]),
     }),
   ],
