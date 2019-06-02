@@ -1,0 +1,13 @@
+.primary-section {
+  &--small {
+    @apply py-6;
+  }
+
+  &--medium {
+    @apply py-8;
+  }
+
+  &--large {
+    @apply py-16;
+  }
+}

@@ -1,6 +1,14 @@
 .alert {
   @apply border-l-4 p-4;
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &--medium {
+    @apply p-6;
+  }
+
   &--info {
     @apply bg-gray-200 border-primary-400 text-primary-700;
   }

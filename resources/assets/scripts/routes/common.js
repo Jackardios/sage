@@ -1,5 +1,6 @@
 import initBurger from '../components/burger';
 import initHeader from '../components/header';
+import initPhoneMask from '../components/phoneMask';
 import initSmoothScrollToAnchor from '../components/smoothScrollToAnchor';
 import initAlertModal from '../components/alertModal';
 import initCallrequestModal from '../components/callrequestModal';
@@ -13,6 +14,7 @@ export default {
     // JavaScript to be fired on all pages
     initBurger();
     initHeader();
+    initPhoneMask();
     initSmoothScrollToAnchor();
 
     initAlertModal();
