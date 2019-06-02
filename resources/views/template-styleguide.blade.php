@@ -32,9 +32,9 @@
         </div>
         <div class="mt-6">
           <div class="flex flex-wrap -mx-3">
-            <div class="w-full md:w-1/2 xl:w-1/4 py-1 px-3"><input type="text" name="user_name" id="user_name" placeholder="Your name" class="primary-input primary-input--fullwidth"></div>
-            <div class="w-full md:w-1/2 xl:w-1/4 py-1 px-3"><input type="email" name="user_email" id="user_email" placeholder="Your email" class="primary-input primary-input--fullwidth"></div>
-            <div class="w-full md:w-1/2 xl:w-1/4 py-1 px-3">
+            <div class="w-full md:w-1/3 xl:w-1/4 py-1 px-3"><input type="text" name="user_name" id="user_name" placeholder="Your name" class="primary-input primary-input--fullwidth"></div>
+            <div class="w-full md:w-1/3 xl:w-1/4 py-1 px-3"><input type="email" name="user_email" id="user_email" placeholder="Your email" class="primary-input primary-input--fullwidth"></div>
+            <div class="w-full md:w-1/3 xl:w-1/4 py-1 px-3">
               <div class="primary-select-container">
                 <select name="user_select" id="user_select" class="primary-select-container__select primary-input primary-input--fullwidth">
                   <option value="" disabled selected>placeholder</option>

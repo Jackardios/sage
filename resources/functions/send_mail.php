@@ -183,7 +183,7 @@ function sendCallrequest()
 
 		// Отправка email сообщения
 		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваша заявка на обратный звонок успешно отправлена.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			$response_message = '<div class="font-700 text-lg text-primary-500">Ваша заявка на обратный звонок успешно отправлена.</div><div class="text-gray-600 mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
 			echo json_encode(array('status' => 'success', 'message' => $response_message));
 			exit;
 		} else {
@@ -235,7 +235,7 @@ function sendMessage()
 
 		// Отправка email сообщения
 		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваше сообщение успешно отправлено.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			$response_message = '<div class="font-700 text-lg text-primary-500">Ваше сообщение успешно отправлено.</div><div class="text-gray-600 mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
 			echo json_encode(array('status' => 'success', 'message' => $response_message));
 			exit;
 		} else {
@@ -317,7 +317,7 @@ function sendOrder()
 
 		// Отправка email сообщения
 		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваш заказ успешно отправлен.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			$response_message = '<div class="font-700 text-lg text-primary-500">Ваш заказ успешно отправлен.</div><div class="text-gray-600 mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
 			echo json_encode(array('status' => 'success', 'message' => $response_message));
 			exit;
 		} else {
@@ -399,7 +399,7 @@ function sendCalculateRequest()
 
 		// Отправка email сообщения
 		if (wp_mail($recipients_emails, $subject, $body, $headers)) {
-			$response_message = '<div class="font-700 text-lg text-secondary-dark">Ваша заявка успешно отправлена.</div><div class="text-gray-dark mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
+			$response_message = '<div class="font-700 text-lg text-primary-500">Ваша заявка успешно отправлена.</div><div class="text-gray-600 mt-4">Наш менеджер свяжется с вами в ближайшее время</div>';
 			echo json_encode(array('status' => 'success', 'message' => $response_message));
 			exit;
 		} else {
