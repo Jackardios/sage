@@ -1,5 +1,5 @@
 .primary-input {
-  @apply inline-block align-middle appearance-none rounded bg-gray-lightest border-1 text-gray-darkest py-3 px-4 mb-3 leading-tight;
+  @apply inline-block align-middle appearance-none rounded bg-gray-200 border text-gray-800 py-3 px-4 mb-3 leading-tight;
 
   transition: background-color 0.16s ease, border-color 0.16s ease;
 
@@ -12,18 +12,18 @@
   }
 
   &--invalid {
-    @apply border-error;
+    @apply border-error-400;
   }
 
   &--dark {
-    @apply bg-primary-darkest border-1 border-gray-darkest text-gray-lighter;
+    @apply bg-primary-800 border border-gray-800 text-gray-300;
 
     &:hover {
       @apply border-white;
     }
 
     &:focus {
-      @apply outline-none bg-primary-darkest border-secondary;
+      @apply outline-none bg-primary-800 border-secondary-400;
     }
   }
 }
@@ -36,6 +36,6 @@
   }
 
   &__icon {
-    @apply pointer-events-none absolute pin-y pin-r flex items-center px-3 text-gray-darker;
+    @apply pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700;
   }
 }

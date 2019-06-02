@@ -11,27 +11,25 @@ $primary-shadow--hidden: 0 0 0 rgba(#988c74, 0.24);
 $primary-shadow: 0 4px 30px rgba(#988c74, 0.24);
 
 // fonts
-$primary-font: "Roboto", "system-ui", "BlinkMacSystemFont", "-apple-system",
-  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  "sans-serif";
+$primary-font: $fontFamily-sans;
 
 // library variables
-$diamodal-base-font-size: 16px;
+$diamodal-base-font-size: 14px;
 $diamodal-base-font-family: $primary-font;
-$diamodal-color-dark: $colors-gray-darkest;
-$diamodal-color-gray--light: $colors-gray-lighter;
-$diamodal-color-primary: $colors-primary;
-$diamodal-color-primary--dark: $colors-primary-dark;
+$diamodal-color-dark: $colors-gray-800;
+$diamodal-color-gray--light: $colors-gray-300;
+$diamodal-color-primary: $colors-primary-400;
+$diamodal-color-primary--dark: $colors-primary-700;
 
-$diacart-base-font: 16px;
+$diacart-base-font: 14px;
 $diacart-numbers-font: $primary-font;
 $diacart-buttons-font: $primary-font;
-$diacart-color-primary: $colors-primary;
-$diacart-color-primary--dark: $colors-primary-dark;
-$diacart-color-primary--light: $colors-primary-light;
-$diacart-color-accent: $colors-primary-dark;
-$diacart-color-dark: $colors-gray-darkest;
-$diacart-color-gray--light: $colors-gray-lighter;
-$diacart-color-gray--dark: $colors-gray-darker;
-$diacart-color-error: $colors-secondary;
-$diacart-color-error--dark: $colors-secondary-dark;
+$diacart-color-primary: $colors-primary-400;
+$diacart-color-primary--dark: $colors-primary-700;
+$diacart-color-primary--light: $colors-primary-300;
+$diacart-color-accent: $colors-primary-700;
+$diacart-color-dark: $colors-gray-800;
+$diacart-color-gray--light: $colors-gray-300;
+$diacart-color-gray--dark: $colors-gray-700;
+$diacart-color-error: $colors-error-600;
+$diacart-color-error--dark: $colors-error-800;
