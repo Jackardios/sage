@@ -68,6 +68,7 @@ module.exports = {
         /^overflow/,
         /active/,
         /focus/,
+        /^content-modal/,
 
         // font awesome
         /^fa-facebook/,

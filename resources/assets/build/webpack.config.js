@@ -132,6 +132,20 @@ let webpackConfig = {
           name: `${config.cacheBusting}.[ext]`,
         },
       },
+      {
+        test: /\.art$/,
+        loader: 'art-template-loader',
+        options: {
+          minimize: true,
+          htmlMinifierOptions: {
+            collapseWhitespace: true,
+            minifyCSS: true,
+            minifyJS: true,
+            // automatically merged at runtime: rules.map(rule => rule.test)
+            ignoreCustomFragments: [],
+          },
+        },
+      },
     ],
   },
   resolve: {
