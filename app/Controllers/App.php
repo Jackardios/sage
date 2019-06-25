@@ -56,13 +56,13 @@ class App extends Controller
         return get_field('phones', 'options');
     }
 
-    public function oneOfPhone()
+    public function oneOfPhones()
     {
         $phones = $this->phones();
         return (!empty($phones) ? $phones[0]['phone'] : null);
     }
 
-    public function oneOfEmail()
+    public function oneOfEmails()
     {
         $emails = $this->emails();
         return (!empty($emails) ? $emails[0]['email'] : null);
