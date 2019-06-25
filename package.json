@@ -86,6 +86,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
     "diamodal": "^1.0.12",
+    "in-view": "^0.6.1",
     "jquery": "^3.4.1",
     "jquery-mask-plugin": "^1.14.15",
     "photoswipe": "^4.1.3"
