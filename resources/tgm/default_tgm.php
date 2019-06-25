@@ -63,73 +63,21 @@ function my_theme_register_required_plugins()
     array(
       'name' => 'Soil', // The plugin name.
       'slug' => 'soil', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/soil-3.7.3.zip', // The plugin source.
+      'source' => get_stylesheet_directory() . '/tgm/plugins/soil-3.8.1.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '3.7.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '3.8.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
       'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
     ),
 
     array(
       'name' => 'Advanced Custom Fields PRO', // The plugin name.
       'slug' => 'acf', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-5.7.13.zip', // The plugin source.
+      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-5.8.1.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '5.7.13', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '5.8.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
       'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-    ),
-
-    array(
-      'name' => 'Advanced Custom Fields: Font Awesome Field', // The plugin name.
-      'slug' => 'advanced-custom-fields-font-awesome', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-fa-3.0.2.zip', // The plugin source.
-      'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '3.0.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-    ),
-
-    array(
-      'name' => 'Advanced Custom Fields: Table Field', // The plugin name.
-      'slug' => 'advanced-custom-fields-table-field', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-table-field-1.2.1.zip', // The plugin source.
-      'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '1.2.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-    ),
-
-    array(
-      'name' => 'Breadcrumb NavXT', // The plugin name.
-      'slug' => 'breadcrumb-navxt', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/breadcrumb-navxt.6.2.1.zip', // The plugin source.
-      'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '6.2.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-    ),
-
-    array(
-      'name' => 'Advanced Custom Fields: Image Crop Add-on', // The plugin name.
-      'slug' => 'acf-image-crop-add-on', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-image-crop-add-on.1.4.12.zip', // The plugin source.
-      'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '1.4.12', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
     ),
 
     array(
@@ -139,69 +87,62 @@ function my_theme_register_required_plugins()
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
       'version' => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+    ),
+
+    array(
+      'name' => 'Advanced Custom Fields: Font Awesome Field', // The plugin name.
+      'slug' => 'advanced-custom-fields-font-awesome', // The plugin slug (typically the folder name).
+      'required' => true, // If false, the plugin is only 'recommended' instead of required.
+      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+    ),
+
+    array(
+      'name' => 'Breadcrumb NavXT', // The plugin name.
+      'slug' => 'breadcrumb-navxt', // The plugin slug (typically the folder name).
+      'required' => true, // If false, the plugin is only 'recommended' instead of required.
+      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
     ),
 
     array(
       'name' => 'Safe SVG', // The plugin name.
       'slug' => 'safe-svg', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/safe-svg.1.8.1.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '1.8.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-    ),
-
-    array(
-      'name' => 'Smush — Сжатие и оптимизация изображений', // The plugin name.
-      'slug' => 'wp-smushit', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/wp-smushit.3.1.1.zip', // The plugin source.
-      'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '3.1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-    ),
-
-    array(
-      'name' => 'All in One SEO Pack', // The plugin name.
-      'slug' => 'all-in-one-seo', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/all-in-one-seo-pack.2.12.zip', // The plugin source.
-      'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '2.12', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
     ),
 
     array(
       'name' => 'TinyMCE Advanced', // The plugin name.
       'slug' => 'tinymce-advanced', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/tinymce-advanced.5.1.0.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '5.1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-      'external_url' => '', // If set, overrides default API URL and points to an external URL.
-      'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
     ),
+
+    // array(
+    //   'name' => 'Advanced Custom Fields: Image Crop Add-on', // The plugin name.
+    //   'slug' => 'acf-image-crop-add-on', // The plugin slug (typically the folder name).
+    //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
+    //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+    // ),
+
+    // array(
+    //   'name' => 'Advanced Custom Fields: Table Field', // The plugin name.
+    //   'slug' => 'advanced-custom-fields-table-field', // The plugin slug (typically the folder name).
+    //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
+    //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+    // ),
+
+    // array(
+    //   'name' => 'Smush — Сжатие и оптимизация изображений', // The plugin name.
+    //   'slug' => 'wp-smushit', // The plugin slug (typically the folder name).
+    //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
+    //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+    // ),
 
     // array(
     //   'name' => 'ACF to REST API', // The plugin name.
     //   'slug' => 'acf-to-rest-api', // The plugin slug (typically the folder name).
-    //   'source' => get_stylesheet_directory() . '/tgm/plugins/acf-to-rest-api.3.1.0.zip', // The plugin source.
     //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
-    //   'version' => '3.1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
     //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-    //   'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-    //   'external_url' => '', // If set, overrides default API URL and points to an external URL.
-    //   'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
     // ),
 
     // array(
@@ -212,8 +153,6 @@ function my_theme_register_required_plugins()
     //   'version' => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
     //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
     //   'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-    //   'external_url' => '', // If set, overrides default API URL and points to an external URL.
-    //   'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
     // ),
   );
 
