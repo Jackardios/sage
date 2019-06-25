@@ -1,0 +1,11 @@
+{{if $data.media}}
+  <div class="content-modal-content__media">{{@ $data.media }}</div>
+{{/if}}
+{{if $data.image}}
+  <img src="{{ $data.image }}" alt="{{ $data.title }}" class="content-modal-content__image">
+{{/if}}
+{{if $data.description}}
+  <div class="content-modal-content__text">
+    <div class="content-modal-content__description">{{@ $data.description }}</div>
+  </div>
+{{/if}}
