@@ -10,4 +10,9 @@
       ajaxUrl: "{{ admin_url('admin-ajax.php') }}",
     };
   </script>
+
+  {{-- 
+  <link rel="preconnect" href="//api-maps.yandex.ru">
+  <link rel="dns-prefetch" href="//api-maps.yandex.ru">
+  --}}
 </head>
