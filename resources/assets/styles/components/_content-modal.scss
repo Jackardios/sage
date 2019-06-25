@@ -1,0 +1,157 @@
+.content-modal {
+  &__box {
+    position: relative;
+    max-width: 768px;
+    overflow: visible;
+    transform: translateY(-30px);
+
+    .diamodal--is-open & {
+      transform: translateY(0);
+    }
+  }
+
+  &__close-button {
+    @extend .btn;
+
+    position: absolute;
+    z-index: 1000;
+    left: unset;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    opacity: 0.75;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: opacity 0.24s ease;
+    border-radius: 0 0 0 0.25rem;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @screen lg {
+      left: 100%;
+      right: unset;
+      height: 24px;
+      background-color: transparent;
+    }
+
+    svg {
+      @extend %inline-block-middle;
+
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    @extend .btn;
+
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -22px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 1.25rem;
+    text-align: center;
+    border-radius: 50%;
+    color: $colors-black;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    transition: color 0.24s ease;
+
+    &:focus,
+    &:hover {
+      color: $colors-primary-500;
+    }
+
+    @screen lg {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+
+    // @include bp-before(lg) {
+    //   color: $colors-black;
+    //   background: #fff;
+    //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    // }
+  }
+
+  &__prev-btn {
+    left: 5px;
+
+    @screen lg {
+      left: 50%;
+      margin-left: -475px;
+    }
+  }
+
+  &__next-btn {
+    right: 5px;
+
+    @screen lg {
+      right: 50%;
+      margin-right: -475px;
+    }
+  }
+
+  &-content {
+    @apply rounded;
+
+    overflow: hidden;
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &__text {
+      padding: 30px;
+      letter-spacing: 0.04em;
+
+      @screen sm {
+        padding: 36px;
+      }
+    }
+
+    table {
+      border-collapse: collapse;
+
+      td,
+      th {
+        border: 1px solid $colors-gray-200;
+
+        @apply py-2 px-3;
+      }
+    }
+
+    // &__description {
+    //   margin-bottom: 2rem;
+    // }
+
+    &-used-materials {
+      &__title {
+        font-weight: bold;
+        margin: 0 1rem 0 0;
+      }
+
+      &__item {
+        @extend %inline-block-middle;
+
+        color: $colors-primary-500;
+        text-decoration: underline;
+        margin: 0 1rem 0 0;
+
+        &:hover {
+          color: $colors-primary-700;
+        }
+      }
+    }
+  }
+}
