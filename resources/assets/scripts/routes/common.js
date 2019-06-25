@@ -1,9 +1,10 @@
 import initBurger from '../components/burger';
-import initHeader from '../components/header';
+// import initHeader from '../components/header';
 import initPhoneMask from '../components/phoneMask';
 import initSmoothScrollToAnchor from '../components/smoothScrollToAnchor';
 import initAlertModal from '../components/alertModal';
 import initCallrequestModal from '../components/callrequestModal';
+// import initContentModal from '../components/contentModal';
 // import initOrderModal from '../components/orderModal';
 // import initFastOrderModal from '../components/fastOrderModal';
 // import initDiacart from '../components/diacart';
@@ -13,7 +14,7 @@ export default {
   init() {
     // JavaScript to be fired on all pages
     initBurger();
-    initHeader();
+    // initHeader();
     initPhoneMask();
     initSmoothScrollToAnchor();
 
@@ -22,6 +23,7 @@ export default {
     // window.__orderModal = initOrderModal();
     // window.__fastOrderModal = initFastOrderModal();
 
+    // initContentModal();
     // new Lightbox();
   },
   finalize() {

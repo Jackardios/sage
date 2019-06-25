@@ -1,6 +1,6 @@
 import { normalizeSerializedArray } from '../util/helpers';
 
-export default (formSelector = '#contact-form') => {
+export default (formSelector, action) => {
   const $globalLoading = $('#global-loading');
   $(formSelector).on('submit', function(e) {
     e.preventDefault();
@@ -11,7 +11,7 @@ export default (formSelector = '#contact-form') => {
       type: 'POST',
       dataType: 'JSON',
       data: {
-        action: 'send_message',
+        action: action,
         ...data,
       },
       beforeSend() {
