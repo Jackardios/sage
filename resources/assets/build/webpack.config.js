@@ -54,10 +54,17 @@ let webpackConfig = {
       },
       {
         test: /\.js$/,
-        exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites))/],
+        exclude: [
+          /node_modules\/(?!(bootstrap|foundation-sites|wpapi|swiper|dom7)\/).*/,
+        ],
         use: [
           { loader: 'cache' },
-          { loader: 'buble', options: { objectAssign: 'Object.assign' } },
+          {
+            loader: 'buble',
+            options: {
+              objectAssign: 'Object.assign',
+            },
+          },
         ],
       },
       {

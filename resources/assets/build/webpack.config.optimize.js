@@ -34,6 +34,10 @@ module.exports = {
     new UglifyJsPlugin({
       uglifyOptions: {
         ecma: 5,
+        output: {
+          beautify: false,
+          comments: false,
+        },
         compress: {
           warnings: true,
           drop_console: true,
@@ -53,7 +57,12 @@ module.exports = {
           extensions: ['js', 'php'],
         },
       ],
-      whitelist: purgecssWordpress.whitelist.concat(['fas', 'fab', 'far']),
+      whitelist: purgecssWordpress.whitelist.concat([
+        'fas',
+        'fab',
+        'far',
+        'text-secondary-500',
+      ]),
       whitelistPatternsChildren: purgecssWordpress.whitelistPatterns.concat([
         /wp/,
 
@@ -66,9 +75,13 @@ module.exports = {
         // dynamic styles
         /^dynamic/,
         /^overflow/,
+        /^content-modal/,
+        /^wp-post-image/,
+        /lazyload/,
+        /^btn/,
+        /^swiper/,
         /active/,
         /focus/,
-        /^content-modal/,
 
         // font awesome
         /^fa-facebook/,
