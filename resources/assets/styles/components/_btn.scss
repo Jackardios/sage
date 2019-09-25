@@ -1,12 +1,26 @@
 .btn {
-  @apply inline-block font-700 rounded text-center;
+  @apply inline-block align-middle font-700 rounded text-center;
 
   border: none;
   line-height: 1.15;
+  transform: translateY(0) scale(1);
+  transition: all 0.3s;
+
+  &:active {
+    transform: translateY(3px) scale(0.9875);
+  }
 
   &--uppercase {
     letter-spacing: 0.025em;
     text-transform: uppercase;
+  }
+
+  &--rounded-full {
+    @apply rounded-full;
+  }
+
+  &--rounded-none {
+    border-radius: 0 !important;
   }
 
   &--fullwidth {
@@ -14,6 +28,12 @@
     width: 100%;
     max-width: 100%;
     min-width: 100%;
+  }
+
+  &--fixed-height {
+    @apply py-0;
+
+    height: 40px;
   }
 
   &--small {
@@ -28,6 +48,15 @@
     @apply py-4 px-8 text-lg;
   }
 
+  &--square {
+    @apply text-lg;
+
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    padding: 0;
+  }
+
   &--default {
     @apply bg-transparent text-black;
 
@@ -40,34 +69,140 @@
     }
   }
 
+  &--accent {
+    background-color: $colors-primary-500;
+    background: $primary-gradient;
+    background-size: 200% 100%;
+    background-position: 50% 50%;
+    color: #fff;
+    transition: transform 0.3s, background-position 0.4s ease;
+
+    &:hover {
+      background-position: 100% 50%;
+    }
+  }
+
   &--primary {
     @apply bg-primary-500 text-white;
 
-    transition: background-color 0.16s ease;
+    transition: transform 0.3s, background-color 0.3s ease;
 
     &:hover {
       @apply bg-primary-600;
     }
   }
 
-  // &--primary-dark {
-  //   @apply bg-primary-700 text-white;
-
-  //   transition: background-color 0.16s ease;
-
-  //   &:hover {
-  //     @apply bg-primary-800;
-  //   }
-  // }
-
   &--secondary {
     @apply bg-secondary-500 text-white;
 
     text-shadow: 0 1px 2px rgba(#000, 0.5);
-    transition: background-color 0.16s ease;
+    transition: transform 0.3s, background-color 0.2s ease;
 
     &:hover {
       @apply bg-secondary-600;
     }
+  }
+
+  // additional styles
+  &--white {
+    @apply bg-white text-primary-500;
+
+    transition: transform 0.3s, color 0.2s ease;
+
+    &.active,
+    &:hover {
+      @apply text-secondary-500;
+    }
+  }
+
+  &--white-alt {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: transform 0.3s, background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease;
+
+    &.active {
+      background-color: #fff;
+      border-color: #fff;
+      color: $colors-dark;
+
+      .burger-btn-box__line {
+        background-color: $colors-dark !important;
+      }
+
+      &:hover {
+        background-color: #f0f0f0;
+        border-color: #f0f0f0;
+        color: $colors-dark;
+      }
+    }
+
+    &:hover {
+      border-color: $colors-primary-500;
+      color: $colors-primary-500;
+
+      .burger-btn-box__line {
+        background-color: $colors-primary-500;
+      }
+    }
+  }
+
+  &--default {
+    color: #fff;
+    background-color: $colors-dark;
+    transition: transform 0.3s, border-color 0.2s, color 0.2s,
+      background-color 0.2s;
+
+    &:hover {
+      background-color: $colors-gray-800;
+    }
+  }
+
+  &--default-alt {
+    border: 2px solid $colors-dark;
+    color: $colors-dark;
+    background-color: transparent;
+    transition: transform 0.3s, border-color 0.2s, color 0.2s,
+      background-color 0.2s;
+
+    .burger-btn-box__line {
+      background-color: $colors-dark !important;
+    }
+
+    &.active {
+      background-color: $colors-dark;
+      border-color: $colors-dark;
+      color: #fff;
+
+      .burger-btn-box__line {
+        background-color: #fff !important;
+      }
+
+      &:hover {
+        background-color: $colors-primary-600;
+        border-color: $colors-primary-600;
+        color: #fff;
+
+        .burger-btn-box__line {
+          background-color: #fff !important;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $colors-primary-500;
+      color: $colors-primary-500;
+
+      .burger-btn-box__line {
+        background-color: $colors-primary-500 !important;
+      }
+    }
+  }
+
+  &--default-alt-light {
+    @extend .btn--default-alt;
+
+    border-color: $colors-gray-300;
   }
 }
