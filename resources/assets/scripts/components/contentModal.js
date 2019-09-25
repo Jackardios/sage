@@ -9,7 +9,7 @@ export default (selector = '.content-modal-item') => {
     template: modalTemplate,
   });
 
-  let currentItemIndex, currentOpenTimeout;
+  let currentItemIndex;
 
   function moveToItem(index) {
     if (itemLastIndex) {
@@ -19,6 +19,7 @@ export default (selector = '.content-modal-item') => {
         index = itemLastIndex;
       }
       const item = $items[index];
+
       if (item) {
         const data = $(item).data('json');
 
@@ -34,6 +35,7 @@ export default (selector = '.content-modal-item') => {
       e.preventDefault();
       e.stopPropagation();
       const data = $(this).data('json');
+
       contentModal.content = modalContentTemplate(data);
       contentModal.open();
       currentItemIndex = $items.index(this);
