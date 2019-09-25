@@ -121,9 +121,7 @@ add_filter('excerpt_length', function ($length) {
 /**
  * Load external functions
  */
-require_once get_template_directory() . '/functions/create_acf_fields.php';
-// require_once get_template_directory() . '/functions/ajax_add_review.php';
-// require_once get_template_directory() . '/functions/send_mail.php';
+require_once get_template_directory() . '/functions/send_mail.php';
 // require_once get_template_directory() . '/functions/custom_bcn_template_tag.php';
 // require_once get_template_directory() . '/functions/remove_archive_title_prefixes.php'
 // require_once get_template_directory() . '/functions/create_post_type_products.php';
