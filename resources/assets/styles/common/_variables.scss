@@ -5,6 +5,7 @@ $ease-out-cubic: cubic-bezier(0.2, 0.5, 0.3, 1);
 $ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 $ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
 $wind-easing: cubic-bezier(0.11, 0.815, 0.195, 0.95);
+$snappy-easing: cubic-bezier(0.694, 0.048, 0.335, 1);
 
 // shadows
 $primary-shadow--hidden: 0 0 0 rgba(#988c74, 0.24);
@@ -41,3 +42,13 @@ $diacart-color-gray--light: $colors-gray-300;
 $diacart-color-gray--dark: $colors-gray-700;
 $diacart-color-error: $colors-error-600;
 $diacart-color-error--dark: $colors-error-800;
+
+// header
+$primary-header-top-height: 40px;
+$primary-header-top-height-lg: 50px;
+$primary-header-bottom-height: 70px;
+$primary-header-bottom-height-lg: 90px;
+$primary-header-height: $primary-header-top-height +
+  $primary-header-bottom-height;
+$primary-header-height-lg: $primary-header-top-height-lg +
+  $primary-header-bottom-height-lg;

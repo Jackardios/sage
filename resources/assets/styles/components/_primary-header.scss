@@ -1,6 +1,3 @@
-$primary-header-height: 70px;
-$primary-header-height-lg: 90px;
-
 .primary-header {
   position: fixed;
   top: 0;
@@ -12,18 +9,82 @@ $primary-header-height-lg: 90px;
   transform: translateZ(0);
   will-change: transform;
   background-color: #fff;
-  box-shadow: 0 0 4px rgba(#988c74, 0.2);
-  transition: box-shadow 0.24s ease;
+  box-shadow: 0 0 6px rgba(#000, 0.15);
 
-  &--shadowed {
-    box-shadow: $primary-shadow;
+  &-top {
+    @apply text-sm bg-dim;
+
+    &__container {
+      height: $primary-header-top-height;
+
+      @screen lg {
+        height: $primary-header-top-height-lg;
+      }
+    }
+
+    &__link {
+      @apply text-sm text-gray-800;
+
+      transition: color 0.2s;
+
+      &:hover {
+        @apply text-secondary-500;
+      }
+    }
+
+    &__nav {
+      ul {
+        @apply flex flex-wrap items-center justify-start my-0 -mx-4 p-0;
+
+        list-style: none;
+
+        li {
+          @apply px-1 m-0;
+
+          a {
+            @apply relative inline-block p-3 font-500 text-gray-900;
+
+            white-space: nowrap;
+            font-weight: bold;
+            letter-spacing: 0.065em;
+            transition: color 0.2s;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 8px;
+              right: 4px;
+              background-color: $colors-secondary-500;
+              border-radius: 4px;
+              width: 4px;
+              height: 4px;
+              transform: scale(0);
+              transition: transform 0.2s;
+            }
+
+            &:hover {
+              color: $colors-secondary-500;
+
+              &::after {
+                transform: scale(1);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
-  &__container {
-    height: $primary-header-height;
+  &-bottom {
+    // border-bottom: 1px solid $colors-gray-100;
 
-    @screen lg {
-      height: $primary-header-height-lg;
+    &__container {
+      height: $primary-header-bottom-height;
+
+      @screen lg {
+        height: $primary-header-bottom-height-lg;
+      }
     }
   }
 
@@ -36,63 +97,13 @@ $primary-header-height-lg: 90px;
 
     &__image {
       display: block;
-      width: 60px;
+      width: 170px;
       height: auto;
+      opacity: 1 !important;
 
       @screen lg {
-        width: 90px;
+        width: 235px;
       }
-    }
-  }
-
-  &__nav {
-    overflow: hidden;
-    text-align: center;
-    padding: 20px 15px;
-    border-left: 1px solid $colors-gray-300;
-    border-right: 1px solid $colors-gray-300;
-
-    ul {
-      position: relative;
-      display: block;
-      list-style: none;
-      text-transform: uppercase;
-      margin: 0;
-      padding: 0;
-      margin-right: -20px;
-
-      @screen xl {
-        margin-right: -30px;
-      }
-
-      li {
-        @extend %inline-block-middle;
-
-        margin-right: 20px;
-
-        @screen xl {
-          margin-right: 30px;
-        }
-
-        a {
-          text-decoration: none;
-          color: lighten($colors-gray-800, 30%);
-
-          &:hover {
-            color: $colors-primary-400;
-          }
-        }
-      }
-    }
-  }
-
-  &__burger-btn {
-    @extend %inline-block-middle;
-
-    margin-right: 10px;
-
-    @screen lg {
-      margin-right: 20px;
     }
   }
 }
