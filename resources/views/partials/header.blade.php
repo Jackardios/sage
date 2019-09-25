@@ -56,14 +56,14 @@
             <div class="w-auto" style="max-width: 270px;">
               @if(isset($one_of_phones) && !empty($one_of_phones))
                 <a href="tel:{{ App\strip_phone($one_of_phones) }}" class="primary-icon-link flex flex-no-wrap items-center -mx-1 text-black color-transition">
-                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-phone"></i></div>
+                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-phone fa-fw"></i></div>
                   <div class="primary-icon-link__text px-1 font-700 text-2xl leading-none">{{ $one_of_phones }}</div>
                 </a>
               @endif
               @if(!empty($one_of_addresses))
                 <a href="/контакты#map" class="w-auto mt-2 primary-icon-link flex flex-no-wrap items-center -mx-1">
-                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-map-marker-alt"></i></div>
-                  <div class="primary-icon-link__text px-1 font-500 text-black text-sm">{{ $one_of_addresses }}</div>
+                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-map-marker-alt fa-fw"></i></div>
+                  <div class="primary-icon-link__text px-1 font-400 text-black text-sm">{{ $one_of_addresses }}</div>
                 </a>
               @endif
             </div>
