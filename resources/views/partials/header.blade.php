@@ -56,13 +56,13 @@
             <div class="w-auto" style="max-width: 270px;">
               @if(isset($one_of_phones) && !empty($one_of_phones))
                 <a href="tel:{{ App\strip_phone($one_of_phones) }}" class="primary-icon-link flex flex-no-wrap items-center -mx-1 text-black color-transition">
-                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="icon-phone"></i></div>
+                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-phone"></i></div>
                   <div class="primary-icon-link__text px-1 font-700 text-2xl leading-none">{{ $one_of_phones }}</div>
                 </a>
               @endif
               @if(!empty($one_of_addresses))
                 <a href="/контакты#map" class="w-auto mt-2 primary-icon-link flex flex-no-wrap items-center -mx-1">
-                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="icon-map-marker"></i></div>
+                  <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-map-marker-alt"></i></div>
                   <div class="primary-icon-link__text px-1 font-500 text-black text-sm">{{ $one_of_addresses }}</div>
                 </a>
               @endif
@@ -70,8 +70,8 @@
           </div>
         </div>
         <div class="flex-none p-4 pl-0 lg:pl-4">
-          <button type="button" class="callrequest-btn btn--square btn btn--accent xl:hidden"><i class="icon-phone"></i></button>
-          <div class="hidden xl:inline-block"><button type="button" class="callrequest-btn btn btn--primary-alt btn--medium">Обратный звонок</button></div>
+          <button type="button" class="callrequest-btn btn--square btn btn--accent xl:hidden"><i class="fas fa-phone"></i></button>
+          <div class="hidden xl:inline-block"><button type="button" class="callrequest-btn btn btn--accent btn--large">Обратный звонок</button></div>
         </div>
       </div>
     </div>
@@ -84,14 +84,14 @@
       @if(!empty($phones))
         @foreach($phones as $p)
           <a href="tel:{{ App\strip_phone($p['phone']) }}" class="primary-icon-link flex flex-no-wrap items-start -mx-1 mb-4 text-white color-transition">
-            <div class="primary-icon-link__icon px-1 text-gray-500"><i class="icon-phone"></i></div>
+            <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-phone"></i></div>
             <div class="primary-icon-link__text px-1 font-700 text-2xl leading-none">{{ $p['phone'] }}</div>
           </a>
         @endforeach
       @endif
       @if(!empty($one_of_addresses))
         <a href="/contacts#map" class="w-auto mr-8 primary-icon-link flex flex-no-wrap items-start -mx-1 my-4 text-gray-400 hover:text-white color-transition">
-          <div class="primary-icon-link__icon px-1 text-gray-500"><i class="icon-map-marker"></i></div>
+          <div class="primary-icon-link__icon px-1 text-gray-500"><i class="fas fa-map-marker-alt"></i></div>
           <div class="primary-icon-link__text px-1 font-500">{{ $one_of_addresses }}</div>
         </a>
       @endif
