@@ -1,81 +1,60 @@
-$burger-line-height: 3px;
+$burger-line-height: 2px;
+$burger-line-color: $colors-primary-500;
 
-.burger-btn {
+.burger-btn-box {
   @extend %inline-block-middle;
 
-  cursor: pointer;
-  appearance: none;
-  background: none;
-  padding: 12px 0;
-  z-index: 2;
-  border: none;
-  outline: none;
+  position: relative;
+  width: 17px;
+  height: 12px;
+  transform: rotate(0);
+  transition: transform 0.2s $snappy-easing;
 
-  &:focus &__line,
-  &:hover &__line {
-    background-color: $colors-primary-300;
+  .active > & {
+    transform: rotate(45deg);
   }
 
-  &--dark &__line {
-    background-color: $colors-primary-400;
-  }
+  .active > & > &__line {
+    &:nth-child(1),
+    &:nth-child(3) {
+      transform: scaleX(0);
+    }
 
-  &__box {
-    @extend %inline-block-middle;
-
-    position: relative;
-    z-index: 2;
-    width: 28px;
-    height: 20px;
+    &:nth-child(4) {
+      transform: rotate(-90deg) scaleX(1);
+    }
   }
 
   &__line {
     position: absolute;
     left: 0;
-    right: 0;
     height: $burger-line-height;
-    // border-radius: $burger-line-height;
-    background-color: #fff;
-    transform-origin: 50%;
-    // box-shadow: 0 0 0 rgba($colors-accent, .5);
-    transition: width 0.24s ease, opacity 0.24s, transform 0.48s $wind-easing,
-      background-color 0.32s;
+    background-color: $burger-line-color;
+    transition: background-color 0.2s ease, transform 0.2s $snappy-easing;
 
     &:nth-child(1) {
-      width: 80%;
       top: 0;
+      width: 100%;
+      transform-origin: 100% 50%;
     }
 
-    &:nth-child(2) {
-      width: 100%;
+    &:nth-child(2),
+    &:nth-child(4) {
       top: 50%;
-      margin-top: -($burger-line-height / 2);
+      margin-top: -$burger-line-height / 2;
+      width: 100%;
+      transform-origin: 50% 50%;
     }
 
     &:nth-child(3) {
-      width: 80%;
       bottom: 0;
+      width: 75%;
+      transform-origin: 0% 50%;
     }
-  }
 
-  &.active &__line {
-    width: 100%;
-  }
-
-  &.active &__line:nth-child(1) {
-    transform: rotate(45deg);
-    margin-top: -$burger-line-height;
-    top: 50%;
-  }
-
-  &.active &__line:nth-child(2) {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-
-  &.active &__line:nth-child(3) {
-    transform: rotate(-45deg);
-    bottom: 50%;
+    &:nth-child(4) {
+      transform: rotate(-90deg) scaleX(0);
+    }
   }
 }
 
@@ -84,7 +63,7 @@ $burger-line-height: 3px;
   @extend %fill-fixed;
 
   z-index: 999;
-  background-color: $colors-gray-900;
+  background-color: $colors-dark;
   overflow: auto;
   visibility: hidden;
   opacity: 0;
@@ -95,6 +74,11 @@ $burger-line-height: 3px;
     opacity: 1;
   }
 
+  &.active &-menu {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
   &__wrapper {
     @screen lg {
       padding-top: 50px;
@@ -102,11 +86,22 @@ $burger-line-height: 3px;
   }
 
   &-menu {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    transform: translateY(8px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.1}s;
+      }
+    }
 
     &:not(:first-child) {
-      border-top: 1px solid lighten($colors-gray-800, 10%);
+      border-top: 1px solid rgba(#fff, 0.075);
     }
 
     a {
@@ -114,25 +109,27 @@ $burger-line-height: 3px;
     }
 
     &__phone {
-      @extend %font-size-3;
+      @apply text-2xl;
 
       display: block;
-      font-weight: bold;
+      font-weight: 600;
       color: #fff;
-      margin: 1rem 0;
+      margin: 0 0 0.5rem 0;
+      transition: color 0.2s;
 
       &:hover {
-        color: $colors-gray-400;
+        color: $colors-gray-300;
       }
     }
 
     &__email {
       display: block;
       font-size: 1rem;
-      font-weight: 600;
-      color: $colors-gray-400;
-      margin: 1rem 0;
+      font-weight: 500;
+      color: $colors-gray-500;
+      margin: 0.5rem 0;
       max-width: 300px;
+      transition: color 0.2s;
 
       &:hover {
         color: #fff;
@@ -155,17 +152,16 @@ $burger-line-height: 3px;
 
       li {
         display: block;
-        margin: 0.25rem 0;
+        margin: 0 0 0.15rem 0;
         padding: 0;
 
         a {
           display: block;
           padding-left: 0;
-          padding-top: 0.75rem;
-          padding-bottom: 0.75rem;
-          font-size: 1.25rem;
-          color: $colors-gray-400;
-          transition: 0.24s;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          color: $colors-gray-500;
+          transition: 0.2s;
 
           &:hover {
             padding-left: 0.5rem;
