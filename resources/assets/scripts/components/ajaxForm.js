@@ -2,18 +2,32 @@ import { normalizeSerializedArray } from '../util/helpers';
 
 export default (formSelector, action) => {
   const $globalLoading = $('#global-loading');
-  $(formSelector).on('submit', function(e) {
+  const $form = $(formSelector);
+  $form.on('submit', function(e) {
     e.preventDefault();
-    const data = normalizeSerializedArray($(this).serializeArray());
+    const dataArray = normalizeSerializedArray($(this).serializeArray());
+    const formData = new FormData();
+    $.each(dataArray, (name, value) => {
+      formData.append(name, value);
+    });
+
+    $form.find('input[type="file"]').each(function() {
+      $.each(this.files, (i, file) => {
+        formData.append(this.name, file);
+      });
+    });
+
+    if (!dataArray['action']) {
+      formData.append('action', action);
+    }
 
     $.ajax({
       url: window.wordpress.ajaxUrl,
       type: 'POST',
-      dataType: 'JSON',
-      data: {
-        action: action,
-        ...data,
-      },
+      data: formData,
+      contentType: false,
+      processData: false,
+      dataType: 'json',
       beforeSend() {
         $globalLoading.addClass('active');
       },
