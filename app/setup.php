@@ -151,3 +151,15 @@ add_action('after_setup_theme', function () {
 add_action('admin_enqueue_scripts', function () {
     wp_enqueue_style('admin-styles', get_template_directory_uri() . '/admin.css');
 });
+
+add_filter('block_categories', function ($categories, $post) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'sage',
+                'title' => __('Sage Blocks', 'sage'),
+            ),
+        )
+    );
+}, 10, 2);
