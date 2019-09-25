@@ -32,6 +32,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-nav-walker');
     add_theme_support('soil-nice-search');
     add_theme_support('soil-relative-urls');
+    add_theme_support('soil-js-to-footer');
     // add_theme_support('soil-disable-rest-api');
 
     /**
@@ -45,7 +46,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Основная навигация', 'sage')
     ]);
 
     /**
@@ -58,10 +59,13 @@ add_action('after_setup_theme', function () {
      * Add new image sizes
      */
     if (function_exists('add_image_size')) {
-        add_image_size('small', 150, 150);
         add_image_size('square_small', 250, 250, true);
         add_image_size('square_medium', 500, 500, true);
         // add_image_size('square_large', 1024, 1024);
+        add_image_size('rect_small', 300, 240, true);
+        add_image_size('rect_medium', 500, 300, true);
+        add_image_size('rect_extra_large', 1920, 600, true);
+        add_image_size('extra_large', 1920, 1080);
     }
 
     /**
