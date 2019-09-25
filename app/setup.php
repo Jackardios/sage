@@ -147,3 +147,7 @@ add_action('after_setup_theme', function () {
 
     load_theme_textdomain('sage', get_template_directory() . '/lang');
 });
+
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_style('admin-styles', get_template_directory_uri() . '/admin.css');
+});
