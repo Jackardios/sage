@@ -61,7 +61,6 @@ module.exports = {
         'fas',
         'fab',
         'far',
-        'text-secondary-500',
       ]),
       whitelistPatternsChildren: purgecssWordpress.whitelistPatterns.concat([
         /wp/,
@@ -76,19 +75,27 @@ module.exports = {
         /^dynamic/,
         /^overflow/,
         /^content-modal/,
-        /^wp-post-image/,
-        /lazyload/,
+        /^wp-/,
         /^btn/,
         /^swiper/,
+        /lazyload/,
+        /in-view/,
         /active/,
         /focus/,
+
+        //tailwind
+        /overflow/,
+        /text-gray/,
+        /text-primary/,
+        /text-secondary/,
 
         // font awesome
         /^fa-facebook/,
         /^fa-vk/,
-        /^fa-instagram/,
         /^fa-telegram/,
         /^fa-whatsapp/,
+        /^fa-viber/,
+        /^fa-instagram/,
         /^fa-twitter/,
         /^fa-youtube/,
       ]),
