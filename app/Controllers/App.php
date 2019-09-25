@@ -41,6 +41,11 @@ class App extends Controller
         return get_field('logo_inversed', 'options');
     }
 
+    public function footerText()
+    {
+        return get_field('footer_text', 'options');
+    }
+
     public function socials()
     {
         return get_field('socials', 'options');
@@ -68,18 +73,14 @@ class App extends Controller
         return (!empty($emails) ? $emails[0]['email'] : null);
     }
 
-    public function openingHours()
+    public function addresses()
     {
-        return get_field('opening_hours', 'options');
+        return get_field('addresses', 'options');
     }
 
-    public function address()
+    public function oneOfAddresses()
     {
-        return get_field('address', 'options');
-    }
-
-    public function addressMap()
-    {
-        return get_field('address_map', 'options');
+        $addresses = $this->addresses();
+        return (!empty($addresses) ? $addresses[0]['address'] : null);
     }
 }
