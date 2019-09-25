@@ -67,25 +67,32 @@ function my_theme_register_required_plugins()
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
       'version' => '3.8.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+    ),
+
+    array(
+      'name' => 'Yoast Seo Premium', // The plugin name.
+      'slug' => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
+      'source' => get_stylesheet_directory() . '/tgm/plugins/wordpress-seo-premium-12.1.zip', // The plugin source.
+      'required' => true, // If false, the plugin is only 'recommended' instead of required.
+      'version' => '12.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
     ),
 
     array(
       'name' => 'Advanced Custom Fields PRO', // The plugin name.
       'slug' => 'acf', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-5.8.1.zip', // The plugin source.
+      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-5.8.4.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '5.8.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '5.8.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
     ),
 
     array(
       'name' => 'Advanced Custom Fields: Yandex Map Placemark Field', // The plugin name.
       'slug' => 'acf-yandex-map-placemark', // The plugin slug (typically the folder name).
-      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-yandex-map-placemark.1.0.0.zip', // The plugin source.
+      'source' => get_stylesheet_directory() . '/tgm/plugins/acf-yandex-map-placemark-1.0.1.zip', // The plugin source.
       'required' => true, // If false, the plugin is only 'recommended' instead of required.
-      'version' => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+      'version' => '1.0.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
     ),
 
@@ -118,6 +125,15 @@ function my_theme_register_required_plugins()
     ),
 
     // array(
+    //   'name' => 'Advanced Custom Fields: Yandex Map Polygon Field', // The plugin name.
+    //   'slug' => 'acf-yandex-map-polygon', // The plugin slug (typically the folder name).
+    //   'source' => get_stylesheet_directory() . '/tgm/plugins/acf-yandex-map-polygon-1.0.0.zip', // The plugin source.
+    //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
+    //   'version' => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+    //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+    // ),
+
+    // array(
     //   'name' => 'Advanced Custom Fields: Image Crop Add-on', // The plugin name.
     //   'slug' => 'acf-image-crop-add-on', // The plugin slug (typically the folder name).
     //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
@@ -127,13 +143,6 @@ function my_theme_register_required_plugins()
     // array(
     //   'name' => 'Advanced Custom Fields: Table Field', // The plugin name.
     //   'slug' => 'advanced-custom-fields-table-field', // The plugin slug (typically the folder name).
-    //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
-    //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-    // ),
-
-    // array(
-    //   'name' => 'Smush — Сжатие и оптимизация изображений', // The plugin name.
-    //   'slug' => 'wp-smushit', // The plugin slug (typically the folder name).
     //   'required' => true, // If false, the plugin is only 'recommended' instead of required.
     //   'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
     // ),
