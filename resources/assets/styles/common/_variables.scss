@@ -15,7 +15,7 @@ $primary-shadow: 0 4px 30px rgba(#988c74, 0.24);
 $primary-gradient: linear-gradient(
   45deg,
   $colors-primary-400 0%,
-  darken($colors-primary-500, 10%) 100%
+  $colors-primary-600 100%
 );
 
 // fonts
