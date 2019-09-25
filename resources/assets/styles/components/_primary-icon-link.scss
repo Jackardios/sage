@@ -1,0 +1,15 @@
+.primary-icon-link {
+  &:hover &__icon {
+    @apply text-primary-500;
+
+    transform: scale(1.1);
+  }
+
+  &__icon {
+    transform: scale(1);
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  &__text {
+  }
+}

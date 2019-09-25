@@ -1,0 +1,15 @@
+.primary-content {
+  overflow: auto;
+
+  table {
+    max-width: 100%;
+    width: auto;
+
+    td,
+    th {
+      border: 1px solid $colors-gray-200;
+
+      @apply p-2;
+    }
+  }
+}

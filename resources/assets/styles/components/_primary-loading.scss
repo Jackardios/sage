@@ -1,0 +1,30 @@
+.primary-loading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  z-index: 2000;
+  text-align: right;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+
+  svg {
+    display: inline-block;
+  }
+
+  svg path,
+  svg rect {
+    fill: #fff;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
