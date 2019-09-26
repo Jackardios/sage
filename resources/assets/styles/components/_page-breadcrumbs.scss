@@ -1,0 +1,30 @@
+.page-breadcrumbs {
+  color: $colors-gray-900;
+
+  .delimiter {
+    @apply inline-block align-middle mx-2;
+  }
+
+  > span {
+    @extend %inline-block-middle;
+  }
+
+  a {
+    color: $colors-gray-900;
+    border-bottom: 1px solid $colors-gray-900;
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+      color: $colors-primary-500;
+      border-color: transparent;
+    }
+  }
+
+  > .icon-right {
+    @extend %inline-block-middle;
+
+    @apply mx-2 text-gray-500;
+
+    font-size: 0.5rem;
+  }
+}
