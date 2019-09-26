@@ -13,7 +13,7 @@ import initFileField from '../components/fileField';
 // import initOrderModal from '../components/orderModal';
 // import initFastOrderModal from '../components/fastOrderModal';
 // import initDiacart from '../components/diacart';
-// import Lightbox from '../components/Lightbox';
+import Lightbox from '../components/Lightbox';
 
 // blocks
 import initContactMap from '../blocks/contactMap';
@@ -40,7 +40,7 @@ export default {
     // window.__orderModal = initOrderModal();
     // window.__fastOrderModal = initFastOrderModal();
     // initContentModal();
-    // new Lightbox();
+    new Lightbox();
 
     // block scripts
     initContactMap();
