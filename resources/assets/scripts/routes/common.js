@@ -32,7 +32,7 @@ export default {
     initNumericField();
     initFileField();
     initDetectTabbing();
-    initDetectInView();
+    initDetectInView('.detect-in-view');
 
     // modals
     initAlertModal();

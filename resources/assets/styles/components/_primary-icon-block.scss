@@ -1,0 +1,22 @@
+.primary-icon-block {
+  @apply mx-auto text-center;
+
+  max-width: 14rem;
+
+  &__icon {
+    img {
+      @apply mx-auto;
+
+      width: 100%;
+      height: 80px;
+    }
+  }
+
+  &__text {
+    @apply mt-4;
+
+    @screen sm {
+      @apply text-lg;
+    }
+  }
+}
