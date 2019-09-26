@@ -1,1 +1,1 @@
-<div class="page-header"><h1>{!! App::title() !!}</h1></div>
+<div class="page-header mb-6"><h1>{!! App::title() !!}</h1></div>

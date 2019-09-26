@@ -6,8 +6,8 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    <div class="container">
-      <section class="primary-section primary-section--medium">
+    <section class="primary-section primary-section--medium">
+      <div class="container">
         <div class="alert alert--info my-3" role="alert">
           <p class="alert__title">Info</p>
           <p>Something happened that you should know about.</p>
@@ -47,7 +47,8 @@
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+    @include('sections.contact-form')
   @endwhile
 @endsection
