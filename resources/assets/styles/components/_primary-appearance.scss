@@ -1,0 +1,23 @@
+.primary-appearance {
+  opacity: 0;
+  transform: translateY(-10px);
+  will-change: transform;
+  transition: opacity .5s ease, transform .5s ease;
+
+  .in-view & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.primary-appearance-on-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  will-change: transform;
+  transition: opacity .5s ease, transform .5s ease;
+
+  .active & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

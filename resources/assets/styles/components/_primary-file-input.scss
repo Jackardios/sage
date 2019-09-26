@@ -1,0 +1,31 @@
+.primary-file-input {
+  &__icon {
+    @extend .btn, .btn--square, .btn--gray-alt;
+
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__input {
+    @extend %hidden-input;
+  }
+
+  &__input + &__label {
+    cursor: pointer;
+  }
+
+  &__label {
+    transition: color 0.2s;
+  }
+
+  &__input:focus + &__label,
+  &__input + &__label:hover {
+    color: $colors-secondary-500;
+  }
+
+  &__input:focus + &__label &__icon,
+  &__input + &__label:hover &__icon {
+    border-color: $colors-secondary-500;
+    color: $colors-secondary-500;
+  }
+}

@@ -1,0 +1,47 @@
+.primary-numeric-field {
+  @apply flex items-stretch rounded overflow-hidden;
+
+  &__button,
+  &__input,
+  &__postfix {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  &__button {
+    @apply bg-primary-500 text-white font-700 text-2xl;
+
+    width: 50px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      @apply bg-primary-700;
+    }
+  }
+
+  &__input-container {
+    @apply relative flex-auto;
+  }
+
+  &__input {
+    @apply block w-full px-4;
+
+    border-top: 1px solid $colors-gray-200;
+    border-bottom: 1px solid $colors-gray-200;
+  }
+
+  &__postfix {
+    @apply absolute text-gray-500 text-sm;
+
+    top: 0;
+    right: 1rem;
+    background: #fff;
+    position: absolute;
+    border-top: 1px solid $colors-gray-200;
+    border-bottom: 1px solid $colors-gray-200;
+
+    @screen sm {
+      @apply text-base;
+    }
+  }
+}

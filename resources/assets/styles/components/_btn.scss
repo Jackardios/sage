@@ -205,4 +205,11 @@
 
     border-color: $colors-gray-300;
   }
+
+  &--gray-alt {
+    @extend .btn--default-alt;
+
+    border-color: $colors-gray-300;
+    color: $colors-gray-400;
+  }
 }

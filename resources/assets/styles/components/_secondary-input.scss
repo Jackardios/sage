@@ -1,0 +1,47 @@
+.secondary-input {
+  @apply inline-block align-middle appearance-none rounded bg-white border text-black p-4 leading-tight;
+
+  transition: background-color 0.16s ease, border-color 0.16s ease;
+
+  @include placeholder {
+    @apply text-gray-700;
+  }
+
+  &--large {
+    @screen sm {
+      @apply p-6;
+    }
+  }
+
+  &--gray {
+    @apply bg-gray-100 border-gray-100;
+
+    @include placeholder {
+      @apply text-primary-700;
+    }
+  }
+
+  &:focus {
+    @apply outline-none bg-white border-primary-500;
+  }
+
+  &--fullwidth {
+    @apply block w-full min-w-full max-w-full;
+  }
+
+  &--invalid {
+    @apply border-error-400;
+  }
+
+  // &--dark {
+  //   @apply bg-primary-800 border border-gray-800 text-gray-300;
+
+  //   &:hover {
+  //     @apply border-white;
+  //   }
+
+  //   &:focus {
+  //     @apply outline-none bg-primary-800 border-primary-400;
+  //   }
+  // }
+}

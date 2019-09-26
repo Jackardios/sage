@@ -1,10 +1,14 @@
 .primary-input {
-  @apply inline-block align-middle appearance-none rounded bg-gray-200 border text-gray-800 py-3 px-4 mb-3 leading-tight;
+  @apply inline-block align-middle appearance-none bg-transparent border-b border-gray-400 border-solid text-gray-800 py-3 leading-tight rounded-none;
 
-  transition: background-color 0.16s ease, border-color 0.16s ease;
+  transition: border-color 0.16s ease;
+
+  @include placeholder {
+    @apply text-gray-700;
+  }
 
   &:focus {
-    @apply outline-none bg-white;
+    @apply outline-none border-primary-500;
   }
 
   &--fullwidth {
@@ -23,7 +27,7 @@
     }
 
     &:focus {
-      @apply outline-none bg-primary-800 border-secondary-400;
+      @apply outline-none bg-primary-800 border-primary-400;
     }
   }
 }
