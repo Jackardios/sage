@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf48a5d7a844e139685e15929173642d",
+    "content-hash": "11b5676fc4a5251fa5138925d1ca7335",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -633,16 +633,16 @@
         },
         {
             "name": "mwdelaney/sage-acf-gutenberg-blocks",
-            "version": "0.4.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MWDelaney/sage-acf-wp-blocks.git",
-                "reference": "fced092c9b92efaaeaaa822c8b69e91d0746cf4f"
+                "reference": "7d62720a8484835e2a5a35ac3f2ebd8152691a25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MWDelaney/sage-acf-wp-blocks/zipball/fced092c9b92efaaeaaa822c8b69e91d0746cf4f",
-                "reference": "fced092c9b92efaaeaaa822c8b69e91d0746cf4f",
+                "url": "https://api.github.com/repos/MWDelaney/sage-acf-wp-blocks/zipball/7d62720a8484835e2a5a35ac3f2ebd8152691a25",
+                "reference": "7d62720a8484835e2a5a35ac3f2ebd8152691a25",
                 "shasum": ""
             },
             "require": {
@@ -674,7 +674,7 @@
                 "gutenberg",
                 "wordpress"
             ],
-            "time": "2019-03-26T15:17:49+00:00"
+            "time": "2019-08-18T14:33:39+00:00"
         },
         {
             "name": "mwdelaney/sage-advanced-custom-fields",
@@ -1935,7 +1935,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mwdelaney/sage-advanced-custom-fields": 20
+        "mwdelaney/sage-advanced-custom-fields": 20,
+        "mwdelaney/sage-acf-gutenberg-blocks": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
