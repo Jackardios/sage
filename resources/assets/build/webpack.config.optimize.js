@@ -57,11 +57,7 @@ module.exports = {
           extensions: ['js', 'php'],
         },
       ],
-      whitelist: purgecssWordpress.whitelist.concat([
-        'fas',
-        'fab',
-        'far',
-      ]),
+      whitelist: purgecssWordpress.whitelist.concat(['fas', 'fab', 'far']),
       whitelistPatternsChildren: purgecssWordpress.whitelistPatterns.concat([
         /wp/,
 
@@ -80,6 +76,7 @@ module.exports = {
         /^swiper/,
         /lazyload/,
         /in-view/,
+        /detect-in-view/,
         /active/,
         /focus/,
 
