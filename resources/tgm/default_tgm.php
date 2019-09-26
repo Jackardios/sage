@@ -124,6 +124,13 @@ function my_theme_register_required_plugins()
       'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
     ),
 
+    array(
+      'name' => 'Lazy Load by WP Rocket', // The plugin name.
+      'slug' => 'rocket-lazy-load', // The plugin slug (typically the folder name).
+      'required' => true, // If false, the plugin is only 'recommended' instead of required.
+      'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+    ),
+
     // array(
     //   'name' => 'Advanced Custom Fields: Yandex Map Polygon Field', // The plugin name.
     //   'slug' => 'acf-yandex-map-polygon', // The plugin slug (typically the folder name).
