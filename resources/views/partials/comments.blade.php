@@ -4,7 +4,7 @@ if (post_password_required()) {
 }
 @endphp
 
-<section id="comments" class="comments">
+<section id="comments" class="primary-section primary-section--large">
   @if (have_comments())
     <h2>
       {!! sprintf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sage'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>') !!}
@@ -29,7 +29,7 @@ if (post_password_required()) {
   @endif
 
   @if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments'))
-    <div class="alert alert-warning">
+    <div class="alert alert--warning">
       {{ __('Comments are closed.', 'sage') }}
     </div>
   @endif

@@ -4,10 +4,11 @@ import initPhoneMask from '../components/phoneMask';
 import initSmoothScrollToAnchor from '../components/smoothScrollToAnchor';
 import initAlertModal from '../components/alertModal';
 import initCallrequestModal from '../components/callrequestModal';
-import initNumericInput from '../components/numericInput';
 import initDetectTabbing from '../components/detectTabbing';
 import initDetectInView from '../components/detectInView';
 import initAjaxForm from '../components/ajaxForm';
+import initNumericField from '../components/numericField';
+import initFileField from '../components/fileField';
 // import initContentModal from '../components/contentModal';
 // import initOrderModal from '../components/orderModal';
 // import initFastOrderModal from '../components/fastOrderModal';
@@ -28,7 +29,8 @@ export default {
     initBurger();
     initPhoneMask();
     initSmoothScrollToAnchor();
-    initNumericInput();
+    initNumericField();
+    initFileField();
     initDetectTabbing();
     initDetectInView();
 
@@ -42,9 +44,9 @@ export default {
 
     // block scripts
     initContactMap();
-    initDefaultCarousel();
     initHeroSlider();
-    initAjaxForm('[data-callrequest-form]', 'send_callrequest');
+    initDefaultCarousel();
+    initAjaxForm('[data-ajax-form]');
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

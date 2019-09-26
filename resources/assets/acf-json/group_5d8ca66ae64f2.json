@@ -1,0 +1,233 @@
+{
+    "key": "group_5d8ca66ae64f2",
+    "title": "[Gutenberg] Контент секция",
+    "fields": [
+        {
+            "key": "field_5d8ca67607de5",
+            "label": "Контент",
+            "name": "content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5d8ca7fe07dea",
+            "label": "Размер секции",
+            "name": "size",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "small": "Маленький",
+                "medium": "Средний",
+                "large": "Большой"
+            },
+            "default_value": [
+                "medium"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d8cab96583b8",
+            "label": "Вертикальное выравнивание",
+            "name": "vertical_align",
+            "type": "select",
+            "instructions": "Вертикальное выравнивание контента и бокового изображение",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "start": "По верхнему краю",
+                "center": "По центру",
+                "end": "По нижнему краю"
+            },
+            "default_value": [
+                "start"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d8ca987c8b11",
+            "label": "Цвет текста",
+            "name": "text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#222222"
+        },
+        {
+            "key": "field_5d8ca69a07de6",
+            "label": "Фоновое изображение",
+            "name": "bg_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "rect_extra_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d8ca6b207de7",
+            "label": "Боковое изображение",
+            "name": "side_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d8ca6d907de8",
+            "label": "Размер бокового изображения",
+            "name": "side_image_size",
+            "type": "select",
+            "instructions": "Выберите размер бокового изображения относительно контейнера",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d8ca6b207de7",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1\/4": "25%",
+                "1\/3": "33%",
+                "1\/2": "50%",
+                "2\/3": "66%",
+                "full": "100%"
+            },
+            "default_value": [
+                "1\/2"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d8ca7a507de9",
+            "label": "Сторона бокового изображения",
+            "name": "side_image_position",
+            "type": "select",
+            "instructions": "Выберите размер бокового изображения относительно контейнера",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d8ca6b207de7",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Слева",
+                "right": "Справа"
+            },
+            "default_value": [
+                "left"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/content"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1569500245
+}

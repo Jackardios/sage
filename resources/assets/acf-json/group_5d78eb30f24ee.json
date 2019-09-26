@@ -1,0 +1,183 @@
+{
+    "key": "group_5d78eb30f24ee",
+    "title": "[Gutenberg] Карусель изображений",
+    "fields": [
+        {
+            "key": "field_5d78eb38ef655",
+            "label": "Заголовок",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Например: Примеры наших работ",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d78ebfbef656",
+            "label": "Изображения",
+            "name": "images",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d78ec0eef657",
+            "label": "Размер изображения",
+            "name": "image_size",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rect_medium": "500x300 (С обрезкой)",
+                "rect_small": "300x240 (С обрезкой)",
+                "square_medium": "500x500 (С обрезкой)",
+                "square_small": "250x250 (С обрезкой)",
+                "large": "Крупный (без обрезки)",
+                "medium": "Средний (без обрезки)",
+                "thumbnail": "Миниатюра"
+            },
+            "default_value": [
+                "rect_medium"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d78ec77ef658",
+            "label": "Количество слайдов на страницу",
+            "name": "slides_per_view",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d78ecbcef659",
+            "label": "Лайтбокс",
+            "name": "has_lightbox",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d78ef22ef65a",
+            "label": "Автоплей (в мс)",
+            "name": "autoplay",
+            "type": "number",
+            "instructions": "Введите 0, чтобы убрать автоплей",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "мс",
+            "min": 0,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_5d78ef5cef65b",
+            "label": "Отступы изображений",
+            "name": "padding",
+            "type": "number",
+            "instructions": "В пикселях",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "min": 0,
+            "max": "",
+            "step": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/images-carousel"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1568208634
+}

@@ -1,0 +1,39 @@
+.primary-footer {
+  &-logo {
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &__image {
+      display: block;
+      width: 250px;
+      height: auto;
+      opacity: 1 !important;
+    }
+  }
+
+  &-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      a {
+        @apply py-1 inline-block text-gray-400;
+
+        transition: color 0.3s;
+
+        &:hover {
+          @apply text-white;
+        }
+      }
+    }
+  }
+}
+
+.primary-footer {
+}

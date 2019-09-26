@@ -1,0 +1,7 @@
+.fullheight-section {
+  min-height: calc(100vh - #{$primary-header-height});
+
+  @screen lg {
+    min-height: calc(100vh - #{$primary-header-height-lg});
+  }
+}

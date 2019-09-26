@@ -1,16 +1,20 @@
 {{--
-  Template Name: Главная
+  Template Name: Контакты
 --}}
 
 @extends('layouts.app')
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    <section class="primary-section primary-section--medium border-t border-solid border-gray-200 overflow-hidden{{ isset($section_class) && !empty($section_class) ? " $section_class" : "" }}">
+    <section class="primary-section primary-section--medium border-t border-solid border-gray-200 overflow-hidden">
       <div class="container">
+        @include('partials.page-breadcrumbs')
         <div class="flex flex-wrap items-stretch -mx-4 -mt-4 pb-4">
           <div class="w-full lg:w-1/2 p-4">
-            <div class="page-header mb-6"><h2>Контакты</h2></div>
+            <div class="page-header mb-6"><h1>Контакты</h1></div>
+            @if(get_post()->post_content !== '')
+              <div class="mb-6">{!! the_content() !!}</div>
+            @endif
             @if(!empty($addresses) && count($addresses) > 1)
               <div class="mb-6">
                 @foreach($addresses as $i => $address)
@@ -65,6 +69,6 @@
         </div>
       </div>
     </section>
-    @include('blocks.contact-form')
+    @include('blocks.callrequest-form', ['title' => __('Остались вопросы? Оставьте заявку и мы перезвоним вам!', 'sage')])
   @endwhile
 @endsection

@@ -6,8 +6,6 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    <div class="container">
-
-    </div>
+    @include('partials.content-page')
   @endwhile
 @endsection

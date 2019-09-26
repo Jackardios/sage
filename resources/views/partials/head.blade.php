@@ -8,6 +8,7 @@
     window.wordpress = {
       baseUrl: "{{ site_url() }}",
       ajaxUrl: "{{ admin_url('admin-ajax.php') }}",
+      privacyUrl: "{{ get_privacy_policy_url() }}"
     };
   </script>
 

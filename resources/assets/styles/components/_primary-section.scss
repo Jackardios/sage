@@ -1,13 +1,25 @@
 .primary-section {
   &--small {
-    @apply py-6;
+    @apply py-4;
+
+    @screen lg {
+      @apply py-6;
+    }
   }
 
   &--medium {
     @apply py-8;
+
+    @screen lg {
+      @apply py-10;
+    }
   }
 
   &--large {
-    @apply py-16;
+    @apply py-12;
+
+    @screen lg {
+      @apply py-16;
+    }
   }
 }

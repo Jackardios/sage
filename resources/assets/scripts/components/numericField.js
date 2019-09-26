@@ -1,8 +1,8 @@
 export default (
-  containerSelector = '[data-numeric-input]',
-  buttonMinusSelector = '[data-numeric-input-minus]',
-  buttonPlusSelector = '[data-numeric-input-plus]',
-  inputSelector = '[data-numeric-input-input]'
+  containerSelector = '[data-numeric-field]',
+  buttonMinusSelector = '[data-numeric-field-minus]',
+  buttonPlusSelector = '[data-numeric-field-plus]',
+  inputSelector = '[data-numeric-field-input]'
 ) => {
   $(buttonMinusSelector).on('click', function() {
     const $input = $(this)

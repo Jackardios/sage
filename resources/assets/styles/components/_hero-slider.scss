@@ -1,0 +1,150 @@
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    @extend .fullheight-section;
+
+    @apply pt-5;
+
+    @screen md {
+      padding: 3rem 0;
+    }
+
+    @screen lg {
+      padding: 4rem 0;
+    }
+
+    @media (min-width: 1600px) {
+      padding: 5rem 0;
+    }
+  }
+
+  &__bg {
+    @extend %fill-absolute;
+    @extend %bg-cover;
+
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    transition: opacity 0.6s, visibility 0.6s;
+
+    &--dark {
+      background-color: $colors-dark;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__bg-image {
+    @extend %fill-absolute;
+    @extend %bg-cover;
+
+    z-index: 0;
+    opacity: 0.1;
+    background-position: 40% 50%;
+    transition: opacity 0.6s;
+
+    @screen md {
+      opacity: 0.4;
+    }
+
+    @screen lg {
+      background-position: 20% 50%;
+    }
+
+    @screen xl {
+      opacity: 1;
+    }
+  }
+
+  &__slides {
+    margin: 0 !important;
+  }
+
+  &__controls {
+    @apply relative text-white;
+
+    align-self: flex-end;
+    background-color: rgba($colors-dark, 0.35);
+
+    @screen md {
+      @apply rounded;
+    }
+  }
+
+  &-slide {
+    color: #fff;
+
+    &--dark-text {
+      @apply text-black;
+    }
+
+    &--dark-text &__overtitle {
+      color: $colors-gray-500;
+    }
+
+    &--dark-text &__title {
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    &__overtitle,
+    &__title,
+    &__description,
+    &__btn-container {
+      .swiper-slide-active & {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &-slide {
+    @apply flex flex-col #{!important};
+
+    height: 100%;
+    min-height: 350px;
+
+    &__overtitle,
+    &__title,
+    &__description,
+    &__btn-container {
+      transform: translateY(8px);
+      opacity: 0;
+      transition-property: transform, opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+    }
+
+    &__overtitle {
+      @apply text-lg;
+
+      color: $colors-gray-200;
+      // transition-delay: 0s;
+    }
+
+    &__title {
+      @apply text-4xl;
+
+      @screen lg {
+        @apply text-5xl;
+      }
+
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      transition-delay: 0.15s;
+    }
+
+    &__description {
+      line-height: 1.4;
+      transition-delay: 0.3s;
+    }
+
+    &__btn-container {
+      transition-delay: 0.45s;
+    }
+  }
+}

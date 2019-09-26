@@ -1,0 +1,23 @@
+.webmedia-created-by {
+  @apply flex flex-wrap items-center -mx-2 text-dark;
+
+  opacity: 0.75;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__logo {
+    @apply block px-2;
+
+    width: 38px;
+    height: auto;
+  }
+
+  &__text {
+    @apply flex-1 px-2;
+
+    line-height: 1.25;
+  }
+}

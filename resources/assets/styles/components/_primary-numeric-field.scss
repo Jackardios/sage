@@ -9,7 +9,7 @@
   }
 
   &__button {
-    @apply bg-primary-500 text-white font-700 text-2xl;
+    @apply bg-primary-500 text-white font-700 text-lg;
 
     width: 50px;
     transition: background-color 0.3s ease;

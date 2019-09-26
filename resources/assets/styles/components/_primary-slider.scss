@@ -1,0 +1,44 @@
+.primary-slider {
+  &__item {
+    @apply flex justify-center items-center #{!important} rounded;
+
+    box-sizing: border-box;
+    border: 1px solid $colors-gray-200;
+
+    &:hover img {
+      opacity: 0.5 !important;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  &__prev-btn {
+    position: absolute;
+    z-index: 1;
+    left: -0.875rem;
+    top: 50%;
+    margin-top: -20px;
+
+    @screen xl {
+      left: -3rem;
+    }
+  }
+
+  &__next-btn {
+    position: absolute;
+    z-index: 1;
+    right: -0.875rem;
+    top: 50%;
+    margin-top: -20px;
+
+    @screen xl {
+      right: -3rem;
+    }
+  }
+}
