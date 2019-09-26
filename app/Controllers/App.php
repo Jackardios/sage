@@ -83,4 +83,14 @@ class App extends Controller
         $addresses = $this->addresses();
         return (!empty($addresses) ? $addresses[0]['address'] : null);
     }
+
+    public function contactsPage()
+    {
+        $pages = get_pages(array(
+            'numberposts' => 1,
+            'meta_key' => '_wp_page_template',
+            'meta_value' => 'template-contacts.blade.php'
+        ));
+        return !empty($pages) ? $pages[0] : null;
+    }
 }

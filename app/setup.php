@@ -178,6 +178,6 @@ add_filter('bcn_breadcrumb_title', function ($title, $type, $id) {
  * Change breadcrumbs separator
  */
 add_filter('bcn_settings_init', function ($opt) {
-    $opt['hseparator'] = '<i class="fas fa-chevron-right mx-3 text-sm text-gray-300"></i>';
+    $opt['hseparator'] = '<i class="fas fa-chevron-right mx-3 text-sm text-gray-400"></i>';
     return $opt;
 }, 10, 1);
