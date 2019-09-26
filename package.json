@@ -92,6 +92,7 @@
     "jquery": "^3.4.1",
     "jquery-mask-plugin": "^1.14.15",
     "photoswipe": "^4.1.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^5.0.3"
   }
 }
