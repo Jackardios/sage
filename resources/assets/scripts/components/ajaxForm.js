@@ -1,6 +1,25 @@
 import { normalizeSerializedArray } from '../util/helpers';
 
-export default (formSelector, action) => {
+const defaultOnSuccess = data => {
+  const title = data.status === 'error' ? 'Ошибка' : 'Успешно';
+
+  window.__diamodalAlertModal.title = title;
+  window.__diamodalAlertModal.content = data.message || data.statusText;
+  window.__diamodalAlertModal.open();
+};
+
+const defaultOnError = data => {
+  window.__diamodalAlertModal.title = 'Ошибка';
+  window.__diamodalAlertModal.content = data.message || data.statusText;
+  window.__diamodalAlertModal.open();
+};
+
+export default (
+  formSelector,
+  action,
+  onSuccess = defaultOnSuccess,
+  onError = defaultOnError
+) => {
   const $globalLoading = $('#global-loading');
   const $form = $(formSelector);
   $form.on('submit', function(e) {
@@ -34,18 +53,8 @@ export default (formSelector, action) => {
       complete() {
         $globalLoading.removeClass('active');
       },
-      success(data) {
-        const title = data.status === 'error' ? 'Ошибка' : 'Успешно';
-
-        window.__diamodalAlertModal.title = title;
-        window.__diamodalAlertModal.content = data.message || data.statusText;
-        window.__diamodalAlertModal.open();
-      },
-      error(data) {
-        window.__diamodalAlertModal.title = 'Ошибка';
-        window.__diamodalAlertModal.content = data.message || data.statusText;
-        window.__diamodalAlertModal.open();
-      },
+      success: onSuccess,
+      error: onError,
     });
   });
 };

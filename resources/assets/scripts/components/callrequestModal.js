@@ -20,9 +20,7 @@ export default (selector = '.callrequest-btn') => {
       {
         name: 'user_agreement',
         type: 'checkbox',
-        placeholder: `Я соглашаюсь на передачу персональных данных согласно <a href="${
-          window.wordpress.baseUrl
-        }/privacy-policy/">политике конфиденциальности</a>.`,
+        placeholder: `Я соглашаюсь на передачу персональных данных согласно <a href="${window.wordpress.baseUrl}/privacy-policy/">политике конфиденциальности</a>.`,
         required: true,
       },
     ],
@@ -75,4 +73,6 @@ export default (selector = '.callrequest-btn') => {
     callrequestModal.open();
     return false;
   });
+
+  return callrequestModal;
 };
